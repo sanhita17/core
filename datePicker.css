@@ -1,0 +1,83 @@
+
+Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+Search
+
+
+
+Gmail
+COMPOSE
+Labels
+Inbox (5)
+Starred
+Sent Mail
+Drafts (2)
+More 
+Hangouts
+
+ 
+ 
+ 
+  More 
+1 of 61  
+ 
+Print all In new window
+(no subject) 
+Inbox
+x 
+
+sanhita sriram <sanhita6931@gmail.com>
+Attachments2:27 PM (2 hours ago)
+
+to me 
+4 Attachments 
+ 
+	
+Click here to Reply or Forward
+0.04 GB (0%) of 15 GB used
+Manage
+Terms - Privacy
+Last account activity: 57 minutes ago
+Details
+
+.-calendar_side_panel {
+   position: absolute;
+   background: #fff;
+   border-radius: 5px;
+   width: auto;
+   height: auto;
+   margin-left: 170px;
+   z-index: 40000;
+   padding: 5px 2px;
+   margin-top: -62px;
+   border: 1px solid #d1d1d1;
+   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .5);
+}
+.-calendar_container .-calendar {
+   display: inline-block;
+}
+.-calendar_container .-calendar .hasDatepicker > DIV {
+   border: none !important;
+}
+.-update_range {
+   min-width: 100px;
+   padding: 0 20px;
+   margin: 12px 5px;
+   height: 25px;
+   font-size: 12px;
+   line-height: 12px;
+   background: #5578e0;
+   color: #fff;
+   border-radius: 15px;
+   border: 1px solid transparent;
+   text-transform: uppercase;
+}
+.-update_range.-disabled {
+   opacity: 0.5;
+}
+datePicker.css
+Open with
+2 of 4 items
+datePicker.htmldatePicker.cssdatePicker.jstest.htmlDisplaying datePicker.css.
