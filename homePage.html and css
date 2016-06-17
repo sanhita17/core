@@ -1,0 +1,127 @@
+<table class="homePage-table">
+                <thead>
+                    <tr>
+                        <th style="width:15%">Name</th>
+                        <th style="width:15%">Alerts</th>
+                        <th style="width:15%">Last Active</th>
+                        <th style="width:5%" ng-mouseenter="homeCtrl.thSummary[0]=true" ng-mouseleave="homeCtrl.thSummary[0]=false">C
+                            <span class="homePage-dropdownList homePage-dropdown-hover-table-C" ng-show="homeCtrl.thSummary[0]">
+                               <p class="justified"> Word Summary</p>
+                               <p class="justified normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in dolor repellendus rerum esse libero, ut veritatis, modi harum dolores sed ullam consectetur, minima labore. Beatae repellendus voluptatum, dolorum laborum.
+                                </p>
+                            </span>
+                        </th>
+                        <th style="width:5%" ng-mouseenter="homeCtrl.thSummary[1]=true" ng-mouseleave="homeCtrl.thSummary[1]=false">WS
+                            <span class="homePage-dropdownList homePage-dropdown-hover-table-WS" ng-show="homeCtrl.thSummary[1]">
+                               <p class="justified"> Word Summary</p>
+                               <p class="justified normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in dolor repellendus rerum esse libero, ut veritatis, modi harum dolores sed ullam consectetur, minima labore. Beatae repellendus voluptatum, dolorum laborum.
+                                </p>
+                            </span>
+                        </th>
+                        <th style="width:5%" ng-mouseenter="homeCtrl.thSummary[2]=true" ng-mouseleave="homeCtrl.thSummary[2]=false">L
+                            <span class="homePage-dropdownList homePage-dropdown-hover-table-L" ng-show="homeCtrl.thSummary[2]">
+                               <p class="justified"> Word Summary</p>
+                               <p class="justified normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in dolor repellendus rerum esse libero, ut veritatis, modi harum dolores sed ullam consectetur, minima labore. Beatae repellendus voluptatum, dolorum laborum.
+                                </p>
+                            </span>
+                        </th>
+                        <th style="width:5%" ng-mouseenter="homeCtrl.thSummary[3]=true" ng-mouseleave="homeCtrl.thSummary[3]=false">FS
+                            <span class="homePage-dropdownList homePage-dropdown-hover-table-FS" ng-show="homeCtrl.thSummary[3]">
+                               <p class="justified"> Word Summary</p>
+                               <p class="justified normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in dolor repellendus rerum esse libero, ut veritatis, modi harum dolores sed ullam consectetur, minima labore. Beatae repellendus voluptatum, dolorum laborum.
+                                </p>
+                            </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="student in homeCtrl.studentList">
+                        <td>{{student.name}}</td>
+                        <td class="text-center alert" style="width:160px;">
+                            <span ng-repeat="iconType in student.alerts" class="icon icon-{{iconType}}"></span>
+                        </td>
+                        <td>{{student.lastActive |date:'MM/dd/yyyy' }}
+                        </td>
+                        <td class="text-center"><span class="{{student.skills.C.type}}" ng-class="homeCtrl.highlight[$index]['C']?homeCtrl.getColor():''">{{student.skills.C.value}}</span></td>
+                        <td class="text-center"><span class="{{student.skills.WS.type}}" ng-class="homeCtrl.highlight[$index]['WS']?homeCtrl.getColor():''">{{student.skills.WS.value}}</span></td>
+                        <td class="text-center"><span class="{{student.skills.L.type}}" ng-class="homeCtrl.highlight[$index]['L']?homeCtrl.getColor():''">{{student.skills.L.value}}</span></td>
+                        <td class="text-center"><span class="{{student.skills.FS.type}}" ng-class="homeCtrl.highlight[$index]['FS']?homeCtrl.getColor():''">{{student.skills.FS.value}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+.homePage-dropdown-hover-table {}
+
+.homePage-dropdown-hover-table-C {
+    margin-top: -150px;
+    margin-left: -200px;
+    text-align: left;
+    width: 400px;
+}
+
+.homePage-dropdown-hover-table-WS {
+    margin-top: -150px;
+    margin-left: -300px;
+    text-align: left;
+    width: 400px;
+}
+
+.homePage-dropdown-hover-table-L {
+    margin-top: -150px;
+    margin-left: -400px;
+    text-align: left;
+    width: 400px;
+}
+
+.homePage-dropdown-hover-table-FS {
+    margin-top: -150px;
+    margin-left: -500px;
+    text-align: left;
+    width: 400px;
+}
+
+.blue-round-button {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #5679e1;
+    color: #fff;
+}
+
+.homePage-rightPopup {
+    position: absolute;
+    margin-left: 200px;
+    background: #5679e1;
+    color: #fff;
+    z-index: 10000;
+}
+
+.homePage-rightPopup-alert {
+    width: 200px;
+    height: 200px;
+}
+
+
+.justified {
+    text-align: justify;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.relative {
+    position: relative;
+}
+
+
