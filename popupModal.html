@@ -1,0 +1,29 @@
+<div class="-header" ng-hide="settings.hideHeader">
+   <table>
+      <tr>
+         <td>
+            <span class="-title"><h3>{{settings.title}}</h3></span>
+            <span class="-close" ng-if="settings.hasClose">
+               <button class="-icon -icon-close" ng-click="closeClicked()"></button>
+            </span>
+         </td>
+      </tr>
+      <tr ng-if="settings.subtitle">
+         <td>
+            <span class="-subtitle">{{settings.subtitle}}</span>
+         </td>
+      </tr>
+   </table>
+</div>
+<div class="-content" ng-transclude ng-class="{'-credits': settings.hasCredits}"></div>
+<div class="-footer">
+   <div class="-buttons" ng-if="settings.buttons" ng-class="(settings.showProcessing && processing)?'-hidden':''">
+      <button class="-btn" ng-class="{'-default':settings.default=='reject','-left':settings.splitButtons,'-blue':settings.default=='blue'}" ng-if="settings.buttons.reject" ng-click="rejectClicked()">{{settings.buttons.reject}}</button>
+      <button id="acceptBtn" class="-btn" ng-disabled="settings.disabled" ng-class="{'-default':settings.default=='accept','-right':settings.splitButtons,'-disabled':settings.disabled}" ng-if="settings.buttons.accept" ng-click="acceptClicked($event)">{{settings.buttons.accept}}</button>
+   </div>
+   <div class="-processing" ng-class="(settings.showProcessing && processing)?'':'-hidden'">
+      <span class="-icon -icon_processing"></span><span>Processing...</span>
+   </div>
+</div>
+
+
