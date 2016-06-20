@@ -1,0 +1,115 @@
+
+Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+Search
+
+
+
+Gmail
+COMPOSE
+Labels
+Inbox (5)
+Starred
+Sent Mail
+Drafts (2)
+More 
+Hangouts
+
+ 
+ 
+ 
+  More 
+1 of 64  
+ 
+Print all In new window
+(no subject) 
+Inbox
+x 
+
+sanhita sriram <sanhita6931@gmail.com>
+Attachments5:05 PM (3 minutes ago)
+
+to me 
+3 Attachments 
+ 
+	
+Click here to Reply or Forward
+0.04 GB (0%) of 15 GB used
+Manage
+Terms - Privacy
+Last account activity: 0 minutes ago
+Currently being used in 1 other location  Details
+
+
+<%@ arguments = "transitionTime" %>
+
+. {
+        display:inline-block;
+        width:70px;
+        height:70px;
+        border-radius:50%;
+        border: none;
+        outline: none;
+        cursor:pointer;
+        background-color:<%=globals.button.backgroundColor%>;
+        background-image:url('<%=VSL.browser.msie ? "rightArrow.png" : "icon-arrow-rt.svg"%>');
+        vertical-align:middle;
+        background-size: 28px 28px;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: bottom;
+        transition: background-color,transform 0.2s ease-out;
+}
+.:not([disabled]):hover {
+        background-color:<%=globals.button.hoverBackgroundColor%>;
+        transform: scale(1.2) translate(-7px,-7px);
+        -webkit-transform: scale(1.2) translate(-7px,-7px);
+        
+}
+
+.vslapp_communicating .:not(.-version2) {
+        background-image: url('btn-loading-2.gif');
+        background-position: 50% 50%;
+        background-size: auto;
+}
+
+.-version2[disabled] {
+        background-image: url('btn-loading-2.gif');
+        background-position: 50% 50%;
+        background-size: auto;
+}
+
+@-webkit-keyframes shrink {
+  0% {-webkit-transform: scale(1.0, 1.0);}
+  50% {-webkit-transform: scale(0.5, 0.5);}
+  100% {-webkit-transform: scale(0, 0); display: none;}
+}
+@keyframes shrink {
+  0% {transform: scale(1.0, 1.0);}
+  50% {transform: scale(0.5, 0.5);}
+  100% {transform: scale(0, 0); display: none;}
+}
+.-version2.-startup,
+.-version2.ng-hide-remove {
+  animation: grow <%=transitionTime %>s ease-out;
+  transform: scale(1, 1);
+}
+.-version2.ng-hide-add {
+     animation: shrink <%=transitionTime %>s ease-out;
+     transform: scale(0, 0);
+}
+.-version2.ng-hide:not(.ng-hide-animate) {
+        display:inline-block !important;
+        visibility:hidden !important;
+}
+@keyframes grow {
+  0% {transform: scale(0.0, 0.0);}
+  50% {transform: scale(0.5, 0.5);}
+  100% {transform: scale(1.0, 1.0);}
+}
+nextButton.css
+Open with
+2 of 3 items
+test.htmlnextButton.cssnextButton.jsDisplaying nextButton.css.
