@@ -1,0 +1,161 @@
+. {
+  display: block;
+  position:relative;
+  width: 250px;
+  border-right: 1px dashed #9eaed3;
+  left: 0;
+  top: 0;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  padding-left: 30px;
+  position: relative;
+  height: 99%;
+  min-height: 1px;
+  box-sizing:border-box;
+}
+
+. p {
+  text-align: left;
+}
+. .canvas-con {
+  display: inline-block; 
+  /*position: absolute;
+  bottom: 5px;
+  left: 0;
+  margin: auto;
+  right: 0;*/
+}
+
+.-sidePanelMediaBar {
+  padding: 4px 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  position: absolute;
+  right: 0;
+  bottom: 90px;
+  width: 45px;
+  background-color: rgba(205,211,235,0.8); /* Hex: #cdd3eb;*/
+  z-index: 999999;
+}
+.-sidePanelMediaBar::before {
+  content: " ";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  opacity: .250; 
+  z-index: -1;
+  background-color: #9eaed3;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.-sidePanelMediaBarAudio {
+  position: initial;
+  padding-bottom: 2px;
+}
+.-sidePanelMediaBarAudio:first-child {
+  padding-top: 2px;
+}
+
+.-stepType {
+  color: #b4b9cc;
+}
+.-stepType.-currentStep {
+  color: #000000;
+  font-weight: bold;
+}
+
+.vsl_core_lc_spec_problemType:not(.vsl_core_lc_spec_problemType-skinned) .-withbg{
+background: url('../../resources/images/vel_spine_GuideBackground.svg');
+background-repeat: no-repeat;
+background-position: -45px 175px;
+
+}
+
+.-characterHolder {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  bottom: 5px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  overflow: hidden;
+}
+.-characterHolder-inner {
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+/* Start Slim SidePanel */
+.-slim {
+  width: 160px;
+  padding: 0;
+}
+.-slim .-sidePanelMediaBar {
+  bottom: initial;
+  top: 162px;
+  width: 70px;
+  padding: 15px 0;
+}
+.-slim .-sidePanelMediaBarAudio:first-child {
+  padding: 0;
+}
+.-slimWithCharacter {
+  left: -200%;
+}
+/* End Slim SidePanel */
+
+.popup-modal{
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background-color:rgba(213, 215, 214, 0.5);
+   z-index:1000;
+}
+.popup-modal-content{
+   position:absolute;
+   top:50%;
+   left:50%;
+   width:600px;
+   height:445px;
+   color:#000;
+   background-color:#fff;
+   margin-top:-222px; /* Half the height */
+   margin-left:-300px; /* Half the width */
+   border-radius:5px;
+   -webkit-box-shadow:0 0 15px 6px rgba(0,0,0,0.3);
+   box-shadow:0 0 15px 6px rgba(0,0,0,0.3);
+   z-index:1000;
+   cursor:default;
+}
+
+/* ---------------------------------------------- */
+.popup-modal-content .header{
+   display:block;
+   width:100%;
+   height:40px;
+   position: relative;
+   /*border-bottom:2px solid #f1f1f1;*/
+}
+.popup-modal-content .header .-modalClose {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -13px;
+  width: 26px;
+  height:26px;
+  cursor: pointer;
+}
+.-modalClose > div {
+  margin: 0;
+}

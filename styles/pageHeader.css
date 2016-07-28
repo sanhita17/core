@@ -1,0 +1,118 @@
+. {
+   padding-top:20px;
+}
+.-page-header {
+   margin: 0 30px 20px;
+   width: calc(100% - 60px);
+   min-height: 25px;
+   border: none;
+   border-collapse: collapse;
+   cursor: default;
+}
+
+.-page-header.ng-hide-remove {
+   -webkit-transition: linear 0.4s;
+   transition: linear 0.4s;
+   opacity: 1;
+}
+
+.-page-header.ng-hide {
+   opacity: 0;
+}
+
+.-page-header.-hidden,
+.-page-header.-hidden TBODY,
+.-page-header.-hidden TD,
+.-page-header.-hidden TR {
+   display: none;
+   height: 0;
+}
+
+.-page-header TBODY,
+.-page-header TR,
+.-page-header TD {
+   margin: 0;
+   padding: 0;
+   height: 25px;
+   min-height: 25px;
+   line-height: 25px;
+   border: none;
+   border-collapse: collapse;
+   vertical-align: top;
+}
+
+.-page-header TR.-border {
+   border-bottom: 1px solid #d1d1d1;
+}
+
+.-page-header .-left-side {
+   float: left;
+}
+
+.-page-header .-right-side {
+   float: right;
+}
+
+.-page-header .-left-side .-content,
+.-page-header .-left-side .-content TR,
+.-page-header .-left-side .-content TD{
+   height:25px;
+   line-height:25px;
+}
+
+.-page-header .-left-side .-primary,
+.-page-header .-left-side .-secondary,
+.-page-header .-left-side .-picker,
+.-page-header .-left-side .-help {
+   padding-left: 6px;
+}
+
+.-page-header .-left-side TD:first-of-type {
+   padding-left: 0;
+}
+
+.-page-header .-left-side .-sectionHeader {
+   font-family: 'SourceSansProReg', sans-serif;
+   font-size: 18px;
+   font-weight: 700;
+   color: #333333;
+}
+
+.-page-header .-left-side .-pageHeader {
+   font-family: 'SourceSansProBold', sans-serif;
+   font-size: 19px;
+}
+
+.-page-header .-left-side .-secondaryHeading {
+   font-family: 'SourceSansProReg', sans-serif;
+   font-size: 15px;
+   font-weight: 700;
+   margin-top: 1px;
+}
+.-page-header .-right-side .-actions {
+   font-size: 14px;
+   padding-right: 12px;
+}
+
+.-page-header .-right-side .-actions .-icon {
+   display: inline-block;
+}
+
+.-page-header .-right-side .-actions .-icon:not(:last-of-type) {
+   margin-right: 12px;
+}
+
+.-page-header .-right-side .-actions .-icon:not(:disabled) {
+   cursor: pointer;
+}
+
+
+
+.vsl_velocity_ui_selectors_timePeriodSelector-selector{
+   vertical-align: middle !important;
+   padding-left: 6px !important;
+}
+.-page-header .-left-side > TABLE.vsl_velocity_ui_selectors_timePeriodSelector-calendar TR TD {
+   height: 20px !important;
+   line-height: 16px !important;
+}

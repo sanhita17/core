@@ -1,0 +1,147 @@
+.-header{
+   height:auto;
+   min-height:50px;
+   border-bottom:1px solid #d1d1d1;
+   position:relative;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+.-header TABLE TR:first-of-type TD{
+   padding-top:15px;
+}
+.-header TABLE TR:last-of-type TD{
+   padding-bottom:15px;
+}
+.-header TABLE TD{
+   padding:0 20px;
+}
+.-header .-title{
+   display:inline-block;
+   line-height:20px;
+}
+.-header .-close{
+   position: absolute;
+   right:18px;
+   top:13px;
+}
+.-header .-subtitle{
+   height:20px;
+   line-height:20px;
+   color:#ffffff;
+}
+
+.-content {
+   position:relative;
+   min-height: 40px;
+   padding:0 20px;
+   display:block;
+}
+.-content .-text{
+   padding:20px 0;
+}
+
+.-content.-credits {
+   min-height: 300px;
+   max-height: 500px;
+   padding-top: 30px;
+   padding-left: 30px;
+}
+.-content.-credits dl {
+   margin: 0;
+}
+.-content.-credits dt {
+   font-family: SourceSansProBold;
+   font-size: 16px;
+   font-color: #000000;
+}
+.-content.-credits dd {
+   font-family: SourceSansProReg;
+   font-size: 16px;
+   font-color: #000000;
+}
+.-content.-credits .-credit {
+   margin-bottom: 30px;
+}
+.-content.-credits .-credit:last-child {
+   margin-bottom: 0;
+}
+
+.-footer{
+   text-align:center;
+   min-height:10px;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+.-footer .-buttons{
+   min-height:50px;
+   padding:0 15px;
+   text-align:center;
+}
+.-footer .-buttons.-right{
+   text-align:right;
+}
+.-footer .-buttons .-btn{
+   min-width:100px;
+   padding:0 20px;
+   margin:12px 5px;
+   height:25px;
+   font-size:12px;
+   line-height:12px;
+   background-color:#f2f2f2;
+   color:#5578e0;
+   border-radius:15px;
+   border:1px solid transparent;
+   text-transform:uppercase;
+}
+.-footer .-buttons .-btn.-default{
+   background-color:#5578e0;
+   color:#ffffff;
+}
+.-footer .-buttons .-btn.-left{
+   float:left;
+}
+.-footer .-buttons .-btn.-right{
+   float:right;
+}
+.-footer .-processing{
+   height:50px;
+}
+.-footer .-processing SPAN{
+   color:#333333;
+   height:50px;
+   line-height:50px;
+   display:inline-block;
+   vertical-align:top;
+}
+.-footer .-hidden{
+   display:none;
+}
+.-footer .-buttons .-btn.-disabled{
+   background-color:#ddd;
+   color:#000;
+}
+
+.-footer .-buttons .-btn.-blue {
+   text-transform:none;
+   width:100px;
+   height:46px;
+   background-color:#5679e0;
+   border-radius:6px;
+   font-family:SourceSansProReg;
+   font-size:19px;
+   color:#ffffff;
+   margin-bottom:20px;
+}
+
+/* -----vvvvv----- BLUE */
+.-blue .-header{
+   background-color:#5679e1;
+}
+.-blue .-header .-title H3{
+   color:#ffffff;
+}
+.-blue .-content,
+.-blue .-footer{
+   background-color:#e5e9f5;
+}
+/* -----^^^^^----- BLUE */

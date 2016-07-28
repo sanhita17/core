@@ -1,0 +1,32 @@
+. {
+        position:relative;
+        box-sizing:border-box;
+}
+.-upButton {
+        display:none;
+        z-index:1;
+        position:absolute;
+        top:0px;
+        left:0px;
+        height:25px;
+        width:100%;
+        background:url('arrow_up.png') center center no-repeat,linear-gradient(<%=globals.body.backgroundColor%>,rgba(229, 233, 245,0));
+        background:url('arrow_up.png') center center no-repeat,-webkit-linear-gradient(<%=globals.body.backgroundColor%>,rgba(229, 233, 245,0));
+        
+}
+.-downButton {
+        display:none;
+        z-index:100;
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        height:25px;
+        width:100%;
+        background:url('arrow_down.png') center center no-repeat, linear-gradient(rgba(229, 233, 245,0),<%=globals.body.backgroundColor%>);
+        background:url('arrow_down.png') center center no-repeat, -webkit-linear-gradient(rgba(229, 233, 245,0),<%=globals.body.backgroundColor%>);
+        
+}
+.-withButtons.-overflowingTop .-upButton,
+.-withButtons.-overflowingBottom .-downButton {
+        display:block;
+}
