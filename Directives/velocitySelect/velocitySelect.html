@@ -1,0 +1,9 @@
+<input type="text" class="{{class}}" placeholder="{{placeholder}}" ng-model="searchValue" ng-keyup="search()" ng-disabled="selectDisabled">
+<ul class="-ul" ng-show="showOptions">
+   <li ng-repeat="option in filtered = (options |filter:{show:true,omit:false})" ng-click="optionClicked(option)" class="vsl_velocity_views_teacher_classList_velocitySelect-li">
+      <span class="-firstName">{{option.firstName}}, </span>
+      <span class="-lastName">{{option.lastName}}</span>
+      <span class="-role">{{option.preferredRoles[0].roleName|removeVIPFromTeacherRole}}</span>
+   </li>
+   <li ng-show="!filtered.length">No matching records</li>
+</ul>

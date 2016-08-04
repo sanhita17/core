@@ -1,0 +1,50 @@
+<div class="-subNavbar">
+   <div class="-subNavbar-container">
+
+      <district-selector ng-if="showDistrictSelector"
+                      show-all-districts="{{showAllDistricts}}"
+                      show-district-as-breadcrumb="{{showDistrictAsBreadcrumb}}"
+                      hide-district-drop-down="{{hideDistrictDropDown}}">
+      </district-selector>
+
+      <span class="-carrot" ng-if="showCampusSelector && (currentSelections.userIsDistrict())">&rsaquo;</span>
+
+      <campus-selector ng-if="showCampusSelector"
+                      show-all-campuses="{{showAllCampuses}}"
+                      show-campus-as-breadcrumb="{{showCampusAsBreadcrumb}}"
+                      hide-campus-drop-down="{{hideCampusDropDown}}">
+      </campus-selector>
+
+      <span class="-carrot" ng-if="showClassSelector && (currentSelections.userIsCampus() || currentSelections.userIsDistrict())">&rsaquo;</span>
+
+      <class-selector ng-if="showClassSelector"
+                      show-all-classes="{{showAllClasses}}"
+                      show-class-as-breadcrumb="{{showClassAsBreadcrumb}}"
+                      hide-class-drop-down="{{hideClassDropDown}}">
+      </class-selector>
+
+      <span class="-carrot" ng-if="showStudentSelector">&rsaquo;</span>
+
+      <student-selector ng-if="showStudentSelector"
+                        show-all-students="{{showAllStudents}}"
+                        show-student-as-breadcrumb="{{showStudentAsBreadcrumb}}"
+                        hide-student-drop-down="{{hideStudentDropDown}}">
+      </student-selector>
+
+      <span class="-carrot" ng-if="showStrandSelector">&rsaquo;</span>
+
+      <strand-selector ng-if="showStrandSelector"
+                       show-all-strands="{{showAllStrands}}"
+                       show-strand-as-breadcrumb="{{showStrandAsBreadcrumb}}"
+                       hide-strand-drop-down="{{hideStrandDropDown}}">
+      </strand-selector>
+
+      <span class="-carrot" ng-if="showReportTypeSelector">&rsaquo;</span>
+
+      <report-type-selector ng-if="showReportTypeSelector"
+                            show-report-type-as-breadcrumb="{{showReportTypeAsBreadcrumb}}"
+                            hide-report-type-drop-down="{{hideReportTypeDropDown}}">
+      </report-type-selector>
+
+   </div>
+</div>

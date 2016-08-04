@@ -1,0 +1,112 @@
+<nav class="-navbar">
+   <div class="-navbar-container">
+
+      <div class="-navbar-brand -item" ng-if="userWithNoClasses || userViewingIntro"></div>
+      <a href="#/teacher/dashboard"><div class="-navbar-brand -item" ng-click="navMenuItemClicked();" code="0" ng-if="!userWithNoClasses && !userViewingIntro"></div></a>
+
+      <ul class="-nav-menu" ng-show="uiReady">
+
+         <!-- -----vvvvv----- DASHBOARD -->
+         <li class="-disabled" ng-if="userWithNoClasses || userViewingIntro">
+            <div>Dashboard</div>
+         </li>
+
+         <li ng-if="!userWithNoClasses && !userViewingIntro" ng-class="navMenuItem.current==0?'-current':''">
+            <a href="#/teacher/dashboard"><div ng-click="navMenuItemClicked();" code="0">Dashboard<span class="-jewel">0</span></div></a>
+         </li>
+         <!-- -----^^^^^----- DASHBOARD -->
+
+         <!-- -----vvvvv----- REPORTS -->
+         <li class="-disabled" ng-if="userWithNoClasses">
+            <div>Reports</div>
+         </li>
+
+         <!-- TODO: ADDED -> use this in the interim since one report is available; per Christopher R. (4/20) -->
+         <li ng-if="!userWithNoClasses && !userViewingIntro" ng-class="navMenuItem.current==1?'-current':''">
+            <a href="#/teacher/progress/schoolClassRpt"><div ng-click="navMenuItemClicked();" code="1">Reports</div></a>
+         </li>
+
+         <!-- TODO: COMMENTED -> uncomment when more than a single report is available; per Christopher R. (4/20)
+         <li ng-class="{'-active':navMenuItem.primary==1,'-current':navMenuItem.current==1}" ng-if="!userWithNoClasses">
+            <div ng-click="navMenuItemClicked(1)">Reports</div>
+            <ul class="-dropdown-menu" ng-show="navMenuItem.primary==1">
+               <li ng-class="navMenuItem.selected=='1.1'?'-active':''">
+                  <a href="#/teacher/progress/schoolClassRpt"><div ng-click="navMenuItemClicked(navMenuItem.primary,1)">Class Progress Reports</div></a>
+               </li>
+               <li ng-class="navMenuItem.selected=='1.2'?'-active':''">
+                  <a href="#/teacher/progress/schoolClassRpt"><div ng-click="navMenuItemClicked(navMenuItem.primary,2)">Comprehension Reports</div></a>
+               </li>
+               <li ng-class="navMenuItem.selected=='1.3'?'-active':''">
+                  <a href="#/teacher/progress/schoolClassRpt"><div ng-click="navMenuItemClicked(navMenuItem.primary,3)">Language Reports</div></a>
+               </li>
+               <li ng-class="navMenuItem.selected=='1.4'?'-active':''">
+                  <a href="#/teacher/progress/schoolClassRpt"><div ng-click="navMenuItemClicked(navMenuItem.primary,4)">Word Study Reports</div></a>
+               </li>
+               <li ng-class="navMenuItem.selected=='1.5'?'-active':''">
+                  <a href="#/teacher/progress/schoolClassRPt"><div ng-click="navMenuItemClicked(navMenuItem.primary,5)">Foundational Skills Reports</div></a>
+               </li>
+            </ul>
+         </li>
+         -->
+         <!-- -----^^^^^----- REPORTS -->
+
+         <!-- -----vvvvv----- TOOLS -->
+         <li ng-class="{'-active':navMenuItem.primary==2,'-current':navMenuItem.current==2}">
+            <div ng-click="navMenuItemClicked(2)">Tools</div>
+            <ul class="-dropdown-menu" ng-show="navMenuItem.primary==2">
+               <li ng-class="navMenuItem.selected=='2.1'?'-active':''">
+                  <a href="#/teacher/classes"><div ng-click="navMenuItemClicked(navMenuItem.primary,1)">My Classes</div></a>
+               </li>
+               <!-- li class="separator"></li -->
+               <li ng-class="navMenuItem.selected=='2.2'?'-active':''">
+                  <a href="#/teacher/lessons"><div ng-click="navMenuItemClicked(navMenuItem.primary,2)">Lessons</div></a>
+               </li>
+            </ul>
+         </li>
+         <!-- -----vvvvv----- TOOLS -->
+
+         <!-- -----vvvvv----- SUPPORT -->
+         <li class="-disabled" ng-if="userViewingIntro">
+            <div>Support</div>
+         </li>
+
+         <li ng-if="!userViewingIntro" ng-class="navMenuItem.current==3?'-current':''">
+            <a href="#/support"><div ng-click="navMenuItemClicked();" code="3">Support</div></a>
+         </li>
+
+         <!-- TODO: CODE SNIPPET -> uncomment if functionality is available; has a submenu of items
+         <li ng-class="(navMenuItem.primary==3?'-active':'')" ng-if="!userViewingIntro">
+            <div ng-click="navMenuItemClicked(3)">Support</div>
+            <ul class="-dropdown-menu" ng-show="navMenuItem.primary==3"></ul>
+         </li>
+         -->
+         <!-- -----^^^^^----- SUPPORT -->
+
+         <!-- -----vvvvv----- SUBMIT BUG -->
+         <li class="-submitBug" ng-if="legalSaidNotToShowThis && !userViewingIntro">
+            <div bug-modal><span class="-icon -icon_mail_white" ng-click="navMenuItemClicked();"></span></div>
+         </li>
+         <!-- -----^^^^^----- SUBMIT BUG -->
+
+         <!-- -----vvvvv----- USER MENU -->
+         <li ng-class="navMenuItem.primary==4?'-active':''">
+            <div ng-click="navMenuItemClicked(4)">
+               <span class="-user-details">
+                  <span class="-user-name" ng-if="firstName && lastName">{{firstName.substr(0,1)}}. {{lastName}}</span>
+                  <span class="-user-name" ng-if="!firstName && !lastName"></span>
+                  <span class="-user-glyph">
+                     <span class="glyphicon" ng-class="navMenuItem.primary==4?'glyphicon-triangle-top':'glyphicon-triangle-bottom'"></span>
+                  </span>
+               </span>
+            </div>
+            <ul class="-dropdown-menu" ng-show="navMenuItem.primary==4">
+               <li ng-class="navMenuItem.selected=='4.1'?'-active':''">
+                  <a href="/logout"><div ng-click="navMenuItemClicked(navMenuItem.primary,1)">LOG OUT</div></a>
+               </li>
+            </ul>
+         </li>
+         <!-- -----^^^^^----- USER MENU -->
+
+      </ul>
+   </div>
+</nav>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html class="no-js">
+<head>
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>&lt; ui | strandPieChart &gt;</title>
+   <link rel="stylesheet" type="text/css" href="http://dev.core.voyagersopris.com/client/bower_components/bootstrap/dist/css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="../../app.css">
+   <link rel="stylesheet" type="text/css" href="../../resources/fonts/fonts.css">
+   <link rel="stylesheet" type="text/css" href="../../resources/images/icons.css">
+   <link rel="stylesheet" type="text/css" href="strandPieChart.css">
+   <link rel="stylesheet" href="http://dev.core.voyagersopris.com/client/bower_components/ng-prettyjson/dist/ng-prettyjson.min.css" />
+   <style type="text/css" ></style>
+   <style>
+      BODY{
+         text-align:center;
+         margin-top:20px;
+      }
+      TABLE{ margin:0 auto;border-collapse: collapse; width:725px; }
+      TR{  }
+      TR.odd_row{ height:40px;background-color:#ffffff; }
+      TR.even_row{ height:40px;background-color:#e6ebfb; }
+      TR TD:first-of-type{ width:120px;text-align:right;padding-right:20px; }
+      TD{ width:auto; height:40px; border:1px solid #d1d1d1;text-align:left;font-size:12px;padding-left:20px;position:relative; }
+      TD.divider{ height:10px;background-color:#000000; }
+
+   </style>
+</head>
+<body ng-app="app" ng-controller="AppController">
+
+<table cellpadding="0" cellspacing="0" border="0">
+
+   <tr><td colspan="2" class="divider"></td></tr>
+
+   <tr class="odd_row">
+      <td></td>
+      <td><strand-pie-chart id="piechart1" style="margin:0 auto;width:40px;height:40px;"></strand-pie-chart></td>
+      <td><div pretty-json>{{data1}}</div></td>
+   </tr>
+   <tr class="even_row">
+      <td></td>
+      <td><strand-pie-chart id="piechart2" data="chartData" title="{{chartTitle}}" width="{{chartWidth}}" height="{{chartHeight}}" select="selectRow(selectedRowIndex)"></strand-pie-chart></td>
+      <td>{{data2}}</td>
+   </tr>
+
+   <tr><td colspan="2" class="divider"></td></tr>
+
+</table>
+
+<script src="http://dev.core.voyagersopris.com/client/bower_components/jquery/dist/jquery.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular/angular.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-animate/angular-animate.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/ng-prettyjson/dist/ng-prettyjson.min.js"></script>
+<!-- -----vvvvv----- NEW -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!-- -----^^^^^----- NEW -->
+<script src="http://dev.core.voyagersopris.com/client/vsl/vsl.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/angular.q.extended.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/angular.css.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/core/core.js"></script>
+<script src="../../app/services.js"></script>
+<script src="strandPieChart.js"></script>
+
+<script>
+   (function($localPath){
+      angular
+            .module("app",[
+               "angular.css",
+               "vsl.velocity.ui.strandPieChart"
+            ]);
+
+      angular
+            .module("app")
+            .controller("AppController",AppController);
+
+      AppController.$inject=["$scope", "$timeout"];
+
+      function AppController($scope, $timeout) {
+
+         $timeout(function(){
+            google.charts.setOnLoadCallback(drawChart());
+         },0);
+
+         function drawChart(){
+            var data1=google.visualization.arrayToDataTable([
+               ['Strand','Percentage'],
+               ['(C) Comprehension',2],
+               ['(WS) Word Study',2],
+               ['(L) Language',3],
+               ['(FS) Foundational Skills',3]
+            ]);
+
+            var data2=google.visualization.arrayToDataTable([
+               ['Strand','Percentage'],
+               ['(C) Comprehension',4],
+               ['(WS) Word Study',1],
+               ['(L) Language',2],
+               ['(FS) Foundational Skills',3]
+            ]);
+
+            var options={
+               pieSliceText:'none',
+               tooltip:{trigger:'none'},
+               legend:'none',
+               backgroundColor:'transparent',
+               enableInteractivity:false,
+               height:40,
+               width:40,
+               chartArea:{left:'10%',top:'10%',width:'80%',height:'80%'},
+               slices:{
+                  0:{color:'blue'},
+                  1:{color:'red'},
+                  2:{color:'green'},
+                  3:{color:'orange'}
+               }
+            };
+
+            $scope.data1=data1.toJSON();
+            var chart1=new google.visualization.PieChart(document.getElementById('piechart1'));
+            chart1.draw(data1,options);
+
+            $scope.data2=data2.toJSON();
+            var chart2=new google.visualization.PieChart(document.getElementById('piechart2'));
+            chart2.draw(data2,options);
+         }
+
+      }
+   })(window.location.href);
+</script>
+
+</body>
+</html>

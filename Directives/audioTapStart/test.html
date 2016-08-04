@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>&lt; ui | audioTapStart &gt;</title>
+   <style>
+      body{
+         background-color:#E5E9F5;
+      }
+      .wrapper{
+         position:relative;height:500px;
+      }
+      .wrapper .tester{
+         position:absolute;top:50%;left:50%;margin:-15px 0 0 -15px;
+      }
+   </style>
+
+   <script src="../../../vsl.js"></script>
+   <script>
+      VSL.writeScriptsToPage(
+         // CORE | BOWER_COMPONENTS
+         "<CORE>/client/bower_components/jquery/dist/jquery.js",
+         "<CORE>/client/bower_components/angular/angular.js",
+         "<CORE>/client/bower_components/angular-bootstrap/ui-bootstrap.js",
+         // CORE_CLIENT
+         "<CORE>/client/vsl/vsl.js",
+         "<CORE>/client/vsl/angular.q.extended.js",
+         "<CORE>/client/vsl/angular.css.js",
+         "<CORE>/client/vsl/core/core.js",
+         // CORE
+         "<CORE>/client/vsl/core/ui/iconButton/iconButton.js",
+         "<CORE>/client/vsl/core/ui/radialProgressBar/radialProgressBar.js",
+         "<CORE>/client/vsl/core/ui/audioPlayer/audioPlayer.js",
+         // K5I_ELA_CLIENT | UI
+         "audioTapStart.js"
+      );
+   </script>
+
+</head>
+<body ng-app="app" ng-controller="AppController" audio-tap-start>
+
+<div class="wrapper">
+   <!--
+   NOTE: removed attribute... autoplay="true"
+         ...using timeout to trigger autoplay to simulate a delayed load between
+         ...the loading of the "audioTapStart" and the actual autoplay button triggering a play
+   -->
+   <icon-button class="-audio -small tester" audio-player="testAudio" radial-progress-bar></icon-button>
+</div>
+
+</body>
+<script>
+   (function(){
+
+      angular.module("app",[
+         "vsl.core.ui.iconButton",
+         "vsl.core.ui.radialProgressBar",
+         "vsl.core.ui.audioPlayer",
+         "vsl.velocity.ui.audioTapStart"
+      ]);
+
+      angular
+            .module("app")
+            .controller("AppController", AppController);
+
+      AppController.$inject=["$scope", "$timeout", "vsl.core.ui.audioPlayer"];
+
+      function AppController($scope, $timeout, audioPlayer){
+
+         $scope.testAudio = {
+            src:"resources/RightDing.mp3"
+         };
+
+         $timeout(function() {
+            audioPlayer.play($scope.testAudio);
+         },1000)
+
+      }
+
+   })();
+</script>
+</html>

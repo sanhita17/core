@@ -1,0 +1,46 @@
+<nav class="-navbar">
+   <div class="-navbar-container">
+
+      <a href="#/campus/dashboard"><div class="-navbar-brand -item" ng-click="navMenuItemClicked();" code="0"></div></a>
+
+      <ul class="-nav-menu" ng-show="uiReady">
+
+         <!-- -----vvvvv----- DASHBOARD -->
+         <li ng-class="navMenuItem.current==0?'-current':''">
+            <a href="#/campus/dashboard"><div ng-click="navMenuItemClicked();" code="0">Dashboard<span class="-jewel">0</span></div></a>
+         </li>
+         <!-- -----^^^^^----- DASHBOARD -->
+
+         <!-- -----vvvvv----- TOOLS -->
+         <li ng-class="{'-active':navMenuItem.primary==1,'-current':navMenuItem.current==1}">
+            <div ng-click="navMenuItemClicked(1)">Tools</div>
+            <ul class="-dropdown-menu" ng-show="navMenuItem.primary==1">
+               <li ng-class="navMenuItem.selected=='1.1'?'-active':''">
+                  <a href="#/campus/staff"><div ng-click="navMenuItemClicked(navMenuItem.primary,1)">My Staff</div></a>
+               </li>
+            </ul>
+         </li>
+         <!-- -----vvvvv----- TOOLS -->
+
+         <!-- -----vvvvv----- USER MENU -->
+         <li ng-class="navMenuItem.primary==2?'-active':''">
+            <div ng-click="navMenuItemClicked(2)">
+               <span class="-user-details">
+                  <span class="-user-name" ng-if="firstName && lastName">{{firstName.substr(0,1)}}. {{lastName}}</span>
+                  <span class="-user-name" ng-if="!firstName && !lastName"></span>
+                  <span class="-user-glyph">
+                     <span class="glyphicon" ng-class="navMenuItem.primary==2?'glyphicon-triangle-top':'glyphicon-triangle-bottom'"></span>
+                  </span>
+               </span>
+            </div>
+            <ul class="-dropdown-menu" ng-show="navMenuItem.primary==2">
+               <li ng-class="navMenuItem.selected=='2.1'?'-active':''">
+                  <a href="/logout"><div ng-click="navMenuItemClicked(navMenuItem.primary,1)">LOG OUT</div></a>
+               </li>
+            </ul>
+         </li>
+         <!-- -----^^^^^----- USER MENU -->
+
+      </ul>
+   </div>
+</nav>

@@ -1,0 +1,185 @@
+.-element.ng-hide-remove {
+   -webkit-transition: linear 0.4s;
+   transition: linear 0.4s;
+   opacity: 1;
+}
+.-element.ng-hide {
+   opacity: 0;
+}
+SPAN.pie_chart{
+   display:block;
+}
+SPAN.pie_chart:not(.empty):hover{
+   cursor:pointer;
+}
+SPAN.pie_chart.empty > DIV{
+   display:block;
+   width:30px;
+   height:30px;
+   background-color:#dddddd;
+   border-radius:15px;
+   margin:5px 0;
+}
+
+SPAN.pie_chart DIV,
+SPAN.pie_chart DIV > DIV,
+SPAN.pie_chart DIV > DIV > DIV,
+SPAN.pie_chart DIV > DIV > DIV SVG{
+   overflow:visible !important;
+   z-index:1;
+}
+.google-visualization-tooltip{
+   width:auto !important;
+   top:2px !important;
+}
+.google-visualization-tooltip-item-list{
+   margin:2px 0 3px !important;
+}
+.google-visualization-tooltip-item{
+   margin:0 !important;
+}
+.google-visualization-tooltip SPAN{
+   font-size:12px !important;
+}
+.google-visualization-tooltip-square {
+   width:9px !important;
+   height:10px !important;
+   margin-bottom:-1px !important;
+   margin-right:5px !important;
+}
+
+/* -----=====----- MODAL */
+
+.-element .-icon_loading{
+   margin:9px 14px;
+}
+
+/* -----vvvvv----- POPUP ----- BASE */
+.-element DIV.popover{
+   border-radius:7px;
+   border:none;
+   /* border:1px solid #5679e1; */
+   box-shadow:2px 2px 8px 0 rgba(0,0,0,.5);
+   padding:0;
+   color:#ffffff;
+   width:350px !important;
+   max-width:350px !important;
+   min-width:350px !important;
+   top:36px !important;
+   left:-300px !important;
+   margin-bottom:20px;
+   cursor:default;
+}
+.-element DIV.popover > .popover-inner { background-color: #e5eaf5;border-radius:6px;color:#333333; }
+.-element DIV.popover.top { margin-bottom:6px; }
+.-element DIV.popover.top > .arrow { border-top-color:#5679e1; left:90%; }
+.-element DIV.popover.top > .arrow:after { border-top-color:#5679e1; }
+.-element DIV.popover.bottom { margin-top:10px; }
+.-element DIV.popover.bottom > .arrow { border-bottom-color:#5679e1; left:90%; }
+.-element DIV.popover.bottom > .arrow:after { border-bottom-color:#5679e1; }
+/* -----^^^^^----- POPUP ----- BASE */
+
+.-element .popover-content{
+   padding:0;
+}
+.-element .-details-title{
+   padding:9px 14px;
+   color:#ffffff;
+   background-color:#5679e1;
+   border-top-left-radius: 6px;
+   border-top-right-radius: 6px;
+}
+
+.-element .-details-subtitle{
+   padding:0 14px;
+   margin:5px 0 0;
+   font-weight:700;
+}
+.-element .-details-data{
+   padding:0 14px 5px;
+   font-size:12px;
+   line-height:13px;
+   font-weight:500;
+}
+.-element .-details-data:last-of-type{
+   padding:0 14px 10px;
+}
+.-element .-details-data:last-of-type + .pie_chart_large{
+   padding:0 14px;
+}
+.-element .-details-data UL LI {
+   list-style: inside;
+   margin-left:8px;
+}
+
+/* -----vvvvv----- LARGE PIE CHART */
+SPAN.pie_chart_large{
+   display:inline-block;
+   vertical-align: top;
+   width:135px;
+}
+SPAN.-key-data{
+   display:inline-block;
+   vertical-align: middle;
+   width:180px;
+   height:160px;
+   padding-left:10px;
+}
+.-key-data .-strand{
+   float:left;
+   position:relative;
+   display:inline-block;
+   margin-left:18px;
+   width:100%;
+   height:16px;
+   line-height:14px;
+   font-size:12px;
+   text-align:left;
+}
+.-key-data .-strand:first-of-type{
+   margin-top:40px;
+}
+.-key-data .-strand:last-of-type{
+   margin-bottom:10px;
+}
+.-key-data .-strand:before{
+   content:' ';
+   position:absolute;
+   left:-14px;
+   top:0;
+   width:10px;
+   height:10px;
+   margin:2px 0;
+   border-radius:5px;
+}
+.-key-data .-strand.red:before { background-color:#de3f18; }
+.-key-data .-strand.violet:before { background-color:#9641b9; }
+.-key-data .-strand.orange:before { background-color:#f7931e; }
+.-key-data .-strand.green:before { background-color:#39b54a; }
+
+.-key-data .-btn{
+   min-width:100px;
+   padding:0 10px;
+   margin:0 5px;
+   height:18px;
+   font-size:12px;
+   line-height:12px;
+   background-color:#5578e0;
+   color:#ffffff;
+   border-radius:15px;
+   border:1px solid transparent;
+   text-transform:uppercase;
+   letter-spacing: .03em;
+}
+.-key-data .-btn:hover{
+   cursor:pointer;
+}
+/* -----^^^^^----- LARGE PIE CHART */
+
+/* ---------------------------------------------- printing styles */
+@media print {
+   SPAN.pie_chart.empty > DIV {
+      border: 15px solid #dddddd;
+      border-radius: 15px;
+   }
+}

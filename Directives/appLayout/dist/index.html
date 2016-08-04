@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>&lt;App Layout 2.0&gt;</title>
+    <link rel="stylesheet" type="text/css" href="http://dev.core.voyagersopris.com/client/bower_components/bootstrap/dist/css/bootstrap.css">    
+    <style>
+      #__bs_notify__ {display: none!important;}
+      body,html{height:100%;}
+      
+    </style>
+  </head>
+  <body ng-app="app" ng-controller="appCtrl"> 
+    <app-layout ng-show="uiReady" toggle-guides>
+      <div transclude-to="header" style="display:none;">
+        <student-navbar show-background></student-navbar>
+      </div>
+      <div transclude-to="spine" style="display:none;">SECTION SPINE</div>
+      <div transclude-to="activity" style="display:none;">SECTION ACTIVITY</div>
+      <div transclude-to="footer" style="display:none;">SECTION FOOTER</div>
+    </app-layout>
+    <script src="http://dev.core.voyagersopris.com/client/bower_components/jquery/dist/jquery.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/bower_components/angular/angular.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"> </script>
+    <script src="http://dev.core.voyagersopris.com/client/vsl/vsl.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/vsl/angular.q.extended.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/vsl/angular.css.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/vsl/core/core.js"></script>
+    <script src="http://dev.core.voyagersopris.com/client/vsl/core/ui/overflowScale/overflowScale.js"></script>
+    <!--script(type='text/javascript').
+    angular
+      .css("vsl.velocity",window.location.href
+      .replace(":3001",":54600")
+      .replace("core.voyagersopris","velocity.voyagersopris")
+      .combineUrls("/resources/css/k5i.css"));
+    
+    -->
+    <script src="../../../app/services.js"></script>
+    <script src="../../../app/services/principalProperties.js"></script>
+    <script src="../../../app/filters.js"></script>
+    <script src="../../popupModal/popupModal.js"></script>
+    <script src="../../../views/common/submitBug/submitBug.js"></script>
+    <script src="../../student/navbar/navbar.js"></script>
+    <script src="appLayout.js"></script>
+    <script type="text/javascript">
+      (function($localPath){
+        angular
+          .module("app",["vsl.velocity.ui.layout","vsl.velocity.ui.student.navbar","vsl.core.ui.overflowScale"])
+          .controller('appCtrl',function($scope) {})
+      })(window.location.href);
+    </script>
+  </body>
+</html>

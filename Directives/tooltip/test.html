@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html class="no-js">
+<head>
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>&lt; ui | tooltip &gt;</title>
+   <link rel="stylesheet" type="text/css" href="http://dev.core.voyagersopris.com/client/bower_components/bootstrap/dist/css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="../../app.css">
+   <link rel="stylesheet" type="text/css" href="../../resources/fonts/fonts.css">
+   <link rel="stylesheet" type="text/css" href="tooltip.css">
+   <style type="text/css" ></style>
+   <style>
+      BODY{
+         margin:0;
+      }
+      DIV.hoverContainer{
+         display:block;
+         width:100%;
+         text-align:center;
+         padding:80px;
+      }
+      SPAN.hoverOverMe{
+         display:inline-block;
+         width:150px;
+         height:30px;
+         margin:0 20px;
+         padding:0;
+         font-size:14px;
+         line-height:30px;
+         color:#333333;
+         background-color:#ffffff;
+         border-radius:4px;
+         cursor:default;
+      }
+
+      .tooltip-red + .tooltip > .tooltip-inner { background-color: #cc0000; }
+      .tooltip-red + .tooltip.top > .tooltip-arrow { border-top-color:#cc0000; }
+      .tooltip-red + .tooltip.right > .tooltip-arrow { border-right-color:#cc0000; }
+      .tooltip-red + .tooltip.bottom > .tooltip-arrow { border-bottom-color:#cc0000; }
+      .tooltip-red + .tooltip.left > .tooltip-arrow { border-left-color:#cc0000; }
+
+      .tooltip-green + .tooltip > .tooltip-inner { background-color: #00aa00; }
+      .tooltip-green + .tooltip.top > .tooltip-arrow { border-top-color:#00aa00; }
+      .tooltip-green + .tooltip.right > .tooltip-arrow { border-right-color:#00aa00; }
+      .tooltip-green + .tooltip.bottom > .tooltip-arrow { border-bottom-color:#00aa00; }
+      .tooltip-green + .tooltip.left > .tooltip-arrow { border-left-color:#00aa00; }
+
+      .tooltip-blue + .tooltip > .tooltip-inner { background-color: #0000cc; }
+      .tooltip-blue + .tooltip.top > .tooltip-arrow { border-top-color:#0000cc; }
+      .tooltip-blue + .tooltip.right > .tooltip-arrow { border-right-color:#0000cc; }
+      .tooltip-blue + .tooltip.bottom > .tooltip-arrow { border-bottom-color:#0000cc; }
+      .tooltip-blue + .tooltip.left > .tooltip-arrow { border-left-color:#0000cc; }
+
+      .tooltip-html + .tooltip > .tooltip-inner { background-color: #ffffff;color:#3a63e0;text-align:left;line-height:13px;padding:12px;max-width:300px; }
+      .tooltip-html + .tooltip.top > .tooltip-arrow { border-top-color:#ffffff; }
+      .tooltip-html + .tooltip.right > .tooltip-arrow { border-right-color:#ffffff; }
+      .tooltip-html + .tooltip.bottom > .tooltip-arrow { border-bottom-color:#ffffff; }
+      .tooltip-html + .tooltip.left > .tooltip-arrow { border-left-color:#ffffff; }
+
+      .tooltip-html.real{
+         margin-top:100px;
+         width:auto;
+         background:none;
+         border:none;
+         font-weight:700;
+      }
+
+      .tooltip-html.real + .tooltip > .tooltip-inner { background-color: #ffffff;color:#3a63e0;text-align:left;line-height:13px;padding:12px;max-width:300px; margin-right:200px;}
+   </style>
+</head>
+<body ng-app="app" ng-controller="AppController">
+
+<div class="hoverContainer">
+   <span>Placement of tooltip: top / right/ bottom / left</span>
+   <span class="hoverOverMe" data-toggle="tooltip" tooltip="Tooltip on top" tooltip-placement="top">Hover Over Me!</span>
+   <span class="hoverOverMe" data-toggle="tooltip" tooltip="Tooltip on right" tooltip-placement="right">Hover Over Me!</span>
+   <span class="hoverOverMe" data-toggle="tooltip" tooltip="Tooltip on bottom" tooltip-placement="bottom">Hover Over Me!</span>
+   <span class="hoverOverMe" data-toggle="tooltip" tooltip="Tooltip on left" tooltip-placement="left">Hover Over Me!</span>
+   <hr>
+   <span>Coloring of tooltip: red</span>
+   <span class="hoverOverMe tooltip-red" data-toggle="tooltip" tooltip="Tooltip on top" tooltip-placement="top">Hover Over Me!</span>
+   <span class="hoverOverMe tooltip-green" data-toggle="tooltip" tooltip="Tooltip on top" tooltip-placement="top">Hover Over Me!</span>
+   <span class="hoverOverMe tooltip-blue" data-toggle="tooltip" tooltip="Tooltip on top" tooltip-placement="top">Hover Over Me!</span>
+   <hr>
+   <span class="hoverOverMe tooltip-html" data-toggle="tooltip" tooltip-html-unsafe="Line 1<br />Line 2<br />Line 3">Hover Over Me!</span>
+   <hr>
+   <span class="hoverOverMe tooltip-html real" data-toggle="tooltip" tooltip-html-unsafe="<b>Comprehension Strand</b><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">C</span>
+   <span class="hoverOverMe tooltip-html real" data-toggle="tooltip" tooltip-html-unsafe="<b>Vocabulary and Word Study Strand</b><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">WS</span>
+   <span class="hoverOverMe tooltip-html real" data-toggle="tooltip" tooltip-html-unsafe="<b>Language Strand</b><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">L</span>
+   <span class="hoverOverMe tooltip-html real" data-toggle="tooltip" tooltip-html-unsafe="<b>Foundational Skills Strand</b><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">FS</span>
+</div>
+
+<script src="http://dev.core.voyagersopris.com/client/bower_components/jquery/dist/jquery.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular/angular.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-animate/angular-animate.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/vsl.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/angular.q.extended.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/angular.css.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/core/core.js"></script>
+<script src="../../app/services.js"></script>
+<script src="tooltip.js"></script>
+
+<script>
+   (function($localPath){
+      angular
+            .module("app",[
+               "angular.css",
+               "ui.bootstrap",
+               "vsl.velocity.ui.tooltip"
+            ]);
+
+      angular
+            .module("app")
+            .controller("AppController",AppController);
+
+      AppController.$inject=["$scope","$timeout"];
+      function AppController($scope,$timeout) {
+
+      }
+   })(window.location.href);
+</script>
+
+</body>
+</html>

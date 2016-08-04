@@ -1,0 +1,58 @@
+.-subNavbar{
+   background:#cfd6e8;
+   height:40px;
+   cursor:default;
+   position:fixed;
+   top:40px;
+   left:0;
+   right:0;
+   z-index:5;
+}
+.-subNavbar-container{
+   position:relative;
+   margin:0 10px 0 30px;
+   width:calc(100% - 40px);
+   height:40px;
+}
+.-subNavbar-container.ng-hide-remove {
+   -webkit-transition: linear 0.4s;
+   transition: linear 0.4s;
+   opacity: 1;
+}
+.-subNavbar-container.ng-hide {
+   opacity: 0;
+}
+.-subNavbar-container .-carrot{
+   display:inline-block;
+   vertical-align:top;
+   padding-right:6px;
+   height:40px;
+   line-height:40px;
+   font-size:18px;
+   font-weight:700;
+}
+.-subNavbar-container .-text{
+   display: inline-block;
+   vertical-align: top;
+   height: 40px;
+   line-height: 40px;
+   font-size: 18px;
+   font-weight: 700;
+}
+
+/* ---------------------------------------------- printing styles */
+@media print {
+   .-subNavbar {
+      position: absolute;
+   }
+   .-subNavbar:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      border: 20px solid #cfd6e8;
+   }
+}

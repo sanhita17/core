@@ -1,0 +1,12 @@
+<div class="-element" ng-show="uiReady">
+   <span ng-show="settings.isCurrent"
+         class="-shape" ng-transclude
+         ng-click="getStrandDetails()"
+         click-outside="clickOutside()"
+         popover="{{setLoading()}}"
+         popover-placement="bottom">
+   </span>
+   <span ng-show="!settings.isCurrent"
+         class="-shape" ng-transclude>
+   </span>
+</div>

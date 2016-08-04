@@ -1,0 +1,47 @@
+. {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background-color:rgba(158,174,211,0.7);*/
+  background: -moz-linear-gradient(top,  rgba(91,116,184,0.18) 0%, rgba(91,116,184,0.31) 35%, rgba(91,116,184,0.37) 99%, rgba(91,116,184,0.37) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(91,116,184,0.18) 0%,rgba(91,116,184,0.31) 35%,rgba(91,116,184,0.37) 99%,rgba(91,116,184,0.37) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(91,116,184,0.18) 0%,rgba(91,116,184,0.31) 35%,rgba(91,116,184,0.37) 99%,rgba(91,116,184,0.37) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e5b74b8', endColorstr='#5e5b74b8',GradientType=0 ); /* IE6-9 */
+  z-index: 99999;
+}
+
+.-vt.ng-hide-add.ng-hide-add-active {
+  -webkit-transition: all linear 0.8s;
+  transition: all linear 0.8s;
+  opacity: 0;
+}
+.-vt.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  opacity: 1;
+}
+
+.-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.-animac {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  display: inline-block;
+  width: 250px;
+
+  -webkit-transform: translate3d(-250px,0,0);
+  transform: translate3d(-250px,0,0);
+
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+.-makeHidden {
+  visibility: hidden!important;
+}

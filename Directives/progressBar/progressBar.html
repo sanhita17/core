@@ -1,0 +1,10 @@
+<span class="-progressBar">
+   <span class="-bar -centered">
+      <span class="-progress">
+         <span class="-text">{{settings.text}}</span>
+      </span>
+      <span class="-segments" ng-if="settings.segments">
+         <span class="-segment" ng-repeat="i in getSegments() track by $index" ng-style="getSegmentWidth($index)"></span>
+      </span>
+   </span>
+</span>

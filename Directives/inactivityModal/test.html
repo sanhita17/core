@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>&lt; ui | inactivityModal &gt;</title>
+   <link rel="stylesheet" type="text/css" href="http://dev.core.voyagersopris.com/client/bower_components/bootstrap/dist/css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="../../app.css">
+   <link rel="stylesheet" type="text/css" href="../../resources/fonts/fonts.css">
+   <link rel="stylesheet" type="text/css" href="../../resources/images/icons.css">
+   <link rel="stylesheet" type="text/css" href="../popupModal/popupModal.css">
+   <link rel="stylesheet" type="text/css" href="inactivityModal.css">
+   <style>
+      body{
+         background-color:#E5E9F5;
+      }
+      .wrapper{
+         position:relative;height:500px;
+      }
+      .wrapper .tester{
+         position:absolute;top:50%;left:50%;margin:-15px 0 0 -15px;
+      }
+   </style>
+
+   <script src="../../../vsl.js"></script>
+   <script>
+      VSL.writeScriptsToPage(
+            // CORE | BOWER_COMPONENTS
+            "<CORE>/client/bower_components/jquery/dist/jquery.js",
+            "<CORE>/client/bower_components/angular/angular.js",
+            "<CORE>/client/bower_components/angular-bootstrap/ui-bootstrap.js",
+            "<CORE>/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+            "<CORE>/client/bower_components/ua-parser-js/dist/ua-parser.min.js",
+            // CORE_CLIENT
+            "<CORE>/client/vsl/vsl.js",
+            "<CORE>/client/vsl/angular.q.extended.js",
+            "<CORE>/client/vsl/angular.css.js",
+            "<CORE>/client/vsl/core/core.js",
+            // K5I_ELA_CLIENT | UI
+            "../../app/filters.js",
+            "../popupModal/popupModal.js",
+            "inactivityModal.js"
+      );
+   </script>
+
+</head>
+<body ng-app="app" ng-controller="AppController" audio-tap-start>
+
+<div class="wrapper">
+   <icon-button class="-audio -small tester" audio-player="testAudio" radial-progress-bar></icon-button>
+</div>
+
+</body>
+<script>
+   (function(){
+
+      angular.module("app",[
+         "ui.bootstrap",
+         "vsl.velocity.ui.popupModal",
+         "vsl.velocity.ui.inactivityModal"
+      ]);
+
+      angular
+            .module("app")
+            .controller("AppController", AppController);
+
+      AppController.$inject=["$scope", "$timeout", "$modal"];
+
+      function AppController($scope, $timeout, $modal){
+
+         $scope.secondsLeft = 119;
+
+         $timeout(function() {
+            $scope.settings={
+               hideHeader: true,
+               action: "inactivityDetected",
+               width: 360
+            };
+            var parser = new UAParser();
+            var os = parser.getOS();
+            if (os.name=="iOS" || os.name=="Android" || os.name=="Chromium OS") {
+               $scope.settings.buttons = {
+                  accept:"Yes"
+               };
+               $scope.settings.default = "accept";
+            }
+
+            $modal.open({
+               templateUrl:"inactivityModal.html",
+               backdrop:'static',
+               scope:$scope
+            });
+         },1000)
+
+      }
+
+   })();
+</script>
+</html>

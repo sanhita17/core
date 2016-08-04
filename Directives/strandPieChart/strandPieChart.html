@@ -1,0 +1,18 @@
+<div class="-element" ng-show="uiReady">
+   <span id="piechart{{index}}"
+         class="pie_chart"
+         ng-show="data.type=='time'"
+         ng-click="getPieChartDetails()"
+         click-outside="clickOutside()"
+         popover="{{setLoading()}}"
+         popover-placement="bottom"
+         data="chartData"
+         title="{{chartTitle}}"
+         width="{{chartWidth}}"
+         height="{{chartHeight}}">
+   </span>
+   <span class="pie_chart empty"
+         ng-show="data.type=='empty'">
+      <div></div>
+   </span>
+</div>

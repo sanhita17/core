@@ -1,0 +1,62 @@
+.-progressBar {
+   text-align:center;
+   width:100%;
+   white-space:nowrap;
+}
+.-progressBar:before {
+   content:'';
+   display:inline-block;
+   height:100%;
+   vertical-align:middle;
+   margin-right:-0.2em;
+
+}
+.-progressBar .-centered {
+   position:relative;
+   display:inline-block;
+   vertical-align:middle;
+   width:100%;
+   height:20px;
+   border-radius:10px;
+   background-color:#7894e7;
+   overflow:hidden;
+}
+.-progressBar .-progress{
+   position:relative;
+   display:block;
+   height:20px;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   background-color:#3a63e1;
+}
+.-progressBar .-progress .-text{
+   font-family: 'OswaldLight';
+   position:absolute;
+   right:0;
+   width:20px;
+   font-size:13px;
+   line-height:20px;
+   color:#ffffff;
+   margin-right:2px;
+   text-align:right;
+}
+.-progressBar .-progress .-text.-right{
+   margin-right:-22px;
+   text-align:left;
+}
+
+.-progressBar .-segment{
+   position:absolute;
+   display:inline-block;
+   height:2px;
+   top:9px;
+   left:0;
+}
+.-progressBar .-segment:after{
+   position:absolute;
+   content:'';
+   width:2px;
+   height:2px;
+   right:-1px;
+   background:#ffffff;
+}

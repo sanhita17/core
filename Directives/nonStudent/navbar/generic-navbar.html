@@ -1,0 +1,28 @@
+<nav class="-navbar">
+   <div class="-navbar-container">
+
+      <div class="-navbar-brand -item"></div>
+
+      <ul class="-nav-menu" ng-show="uiReady">
+
+         <!-- -----vvvvv----- USER MENU -->
+         <li ng-class="navMenuItem.primary==1?'-active':''">
+            <div ng-click="navMenuItemClicked(1)">
+               <span class="-user-details">
+                  <span class="-user-name" ng-bind="username"></span>
+                  <span class="-user-glyph">
+                     <span class="glyphicon" ng-class="navMenuItem.primary==1?'glyphicon-triangle-top':'glyphicon-triangle-bottom'"></span>
+                  </span>
+               </span>
+            </div>
+            <ul class="-dropdown-menu" ng-show="navMenuItem.primary==1">
+               <li ng-class="navMenuItem.selected=='1.1'?'-active':''">
+                  <a href="/logout"><div ng-click="navMenuItemClicked(navMenuItem.primary,1)">LOG OUT</div></a>
+               </li>
+            </ul>
+         </li>
+         <!-- -----^^^^^----- USER MENU -->
+
+      </ul>
+   </div>
+</nav>

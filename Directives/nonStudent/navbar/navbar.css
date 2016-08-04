@@ -1,0 +1,222 @@
+.-navbar{
+   background:#4c68b1;
+   color:#fff;
+   height:40px;
+   cursor:default;
+   position:fixed;
+   top:0;
+   left:0;
+   right:0;
+   z-index:10;
+}
+.-navbar-container{
+   position:relative;
+   margin:0 10px 0 30px;
+   width:calc(100% - 40px);
+   height:40px;
+}
+.-navbar-brand{
+   position:absolute;
+   top:0;
+   left:0;
+   height:40px;
+   width:103px;
+   display:inline-block;
+   background-image: url("../../../resources/images/logos/velocity_logo_white.svg");
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+.-nav-menu{
+   position:absolute;
+   top:0;
+   right:0;
+   display:inline-block;
+   height:40px;
+}
+.-nav-menu.ng-hide-remove {
+   -webkit-transition: linear 0.4s;
+   transition: linear 0.4s;
+   opacity: 1;
+}
+.-nav-menu.ng-hide {
+   opacity: 0;
+}
+.-nav-menu a{
+   color:#fff;
+}
+.-nav-menu li{
+   position:relative;
+   float:left;
+   display:block;
+   color:#fff;
+   font-size:16px;
+}
+.-nav-menu li.-disabled {
+   opacity:.2;
+}
+.-nav-menu li div{
+   display:block;
+   height:40px;
+   line-height:40px;
+   padding:0 20px;
+}
+.-nav-menu li div:hover{
+   background-color:#4664ac;
+   cursor:pointer;
+}
+.-nav-menu li.-disabled div:hover{
+   cursor:default;
+}
+.-nav-menu li.-active div{
+   background-color:#405ca7;
+}
+.-nav-menu li.-current div{
+   background-color:#395093;
+   font-weight:700;
+}
+.-nav-menu li div SPAN.-jewel{
+   display:none;
+   /*display:inline-block;*/
+   width:16px;
+   height:16px;
+   border-radius:8px;
+   background-color:#ef3b20;
+   margin:12px 0 12px 10px;
+   vertical-align:top;
+   color:#ffffff;
+   line-height:16px;
+   font-size:10px;
+   text-align:center;
+}
+.-nav-menu li.-submitBug div{
+   padding-right:0;
+}
+.-nav-menu .-dropdown-menu{
+   display:block;
+   position:fixed;
+   top:40px;
+   z-index:1000;
+}
+.-nav-menu .-dropdown-menu li{
+   float:none;
+   font-size:14px;
+}
+.-nav-menu .-dropdown-menu li:first-of-type div{
+   border-top:1px solid rgba(255,255,255,.1);
+}
+.-nav-menu .-dropdown-menu li.-separator{
+   height:1px;
+   background-color:#e5e5e5;
+}
+.-nav-menu .-dropdown-menu li div{
+   display:block;
+   height:36px;
+   line-height:36px;
+   padding:0 20px;
+   min-width:0;
+   background-color:#405ca7;
+   width:150px;
+   font-weight:500;
+}
+.-nav-menu .-dropdown-menu li div.-disabled,
+.-nav-menu .-dropdown-menu li div.-disabled:hover{
+   color: #aaaaaa;
+}
+.-nav-menu .-dropdown-menu li.-active div {
+   color:#000000;
+   background-color:#bdc7e3;
+   font-weight:700;
+}
+.-nav-menu .-dropdown-menu li:not(.-active) div:hover{
+   background-color:#4664ac;
+}
+.-nav-menu .-dropdown-menu li a{
+   color: #ffffff;
+   font-size:14px;
+}
+.-nav-menu > li:last-of-type .-dropdown-menu div{
+   display:block;
+   min-width:0;
+   width:auto;
+}
+.-user-details{
+   background-color:#ffffff;
+   color:#000000;
+   border-radius:20px;
+   padding:0 14px;
+   font-weight:700;
+   font-size:16px;
+}
+.-user-name{
+   z-index:1000;
+}
+.-user-glyph{
+   display:inline-block;
+   margin-left:20px;
+}
+.-icon.-icon_mail_white {
+   margin-top: -4px;
+}
+
+/* ---------------------------------------------- printing styles */
+@media print {
+   .-navbar {
+      position: absolute;
+   }
+   .-navbar:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      border: 20px solid #4c68b1;
+   }
+   .-navbar-container {
+      margin-top: -1px;
+   }
+   .-navbar-brand:before {
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 103px;
+      display: inline-block;
+      content: url("../../../resources/images/logos/velocity_logo_white.svg");
+   }
+   .-nav-menu li div {
+      color: #ffffff !important;
+      -webkit-print-color-adjust: exact;
+   }
+   .-nav-menu li:last-of-type div .-user-name {
+      color: #000000 !important;
+      -webkit-print-color-adjust: exact;
+   }
+   .-nav-menu li.-current div {
+      margin-top: -1px;
+   }
+   .-user-details{
+      position:relative;
+   }
+   .-user-name{
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+   }
+   .-user-name:before{
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: 10px;
+      left: -14px;
+      right: -48px;
+      height: 0;
+      border: 10px solid #ffffff;
+      border-radius: 10px;
+      z-index: -1;
+   }
+   .-user-glyph{
+      position: relative;
+      z-index: 2;
+   }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html class="no-js">
+<head>
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>&lt; ui | progressBar &gt;</title>
+   <link rel="stylesheet" type="text/css" href="http://dev.core.voyagersopris.com/client/bower_components/bootstrap/dist/css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="../../app.css">
+   <link rel="stylesheet" type="text/css" href="../../resources/fonts/fonts.css">
+   <link rel="stylesheet" type="text/css" href="../../resources/images/icons.css">
+   <link rel="stylesheet" type="text/css" href="progressBar.css">
+   <style type="text/css" ></style>
+   <style>
+      BODY{
+         text-align:center;
+         margin-top:20px;
+      }
+      DIV{
+         width:0;
+         height:40px;
+         margin:0px auto;
+         box-shadow:0 0 1px 0 #000000;
+      }
+      DIV.label{
+         width:400px;
+         height:20px;
+         box-shadow:none;
+         color:#000000;
+      }
+   </style>
+</head>
+<body ng-app="app" ng-controller="AppController">
+
+<div class="label">width: 300 | percentage: 60 | segments: 4</div>
+<div>
+   <progress-bar settings="progressBarSettings"></progress-bar>
+</div>
+
+<br>
+
+<div class="label">width: 400 | min: 0 | max: 300 | at: 75 (or 25%) | segments: 6</div>
+<div>
+   <progress-bar settings="progressBarSettings2"></progress-bar>
+</div>
+
+<br>
+
+<div class="label">width: 200 | min: 0 | max: 100 | at: 55 (or 5%) | segments: 2</div>
+<div>
+   <progress-bar settings="progressBarSettings3"></progress-bar>
+</div>
+
+<br>
+
+<div class="label">width: 200 | percentage: 11 | segments: 2</div>
+<div>
+   <progress-bar settings="progressBarSettings4"></progress-bar>
+</div>
+
+<script src="http://dev.core.voyagersopris.com/client/bower_components/jquery/dist/jquery.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular/angular.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-animate/angular-animate.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/vsl.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/angular.q.extended.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/angular.css.js"></script>
+<script src="http://dev.core.voyagersopris.com/client/vsl/core/core.js"></script>
+<script src="../../app/services.js"></script>
+<script src="progressBar.js"></script>
+
+<script>
+   (function($localPath){
+      angular
+            .module("app",[
+               "ngCookies",
+               "angular.css",
+               "vsl.velocity.app.services",
+               "vsl.velocity.ui.progressBar"
+            ]);
+
+      angular
+            .module("app")
+            .controller("AppController",AppController);
+
+      AppController.$inject=["$scope", "$timeout", "temporaryStorage"];
+
+      function AppController($scope, $timeout, temporaryStorage) {
+
+         $scope.progressBarSettings = {
+            width: 300,
+            percentage: 60,
+            segments: 4
+         };
+
+         $scope.progressBarSettings2 = {
+            width: 400,
+            value: {
+               max: 300,
+               at: 75
+            },
+            segments: 6
+         };
+
+         $scope.progressBarSettings3 = {
+            width: 200,
+            value: {
+               max: 100,
+               at: 5
+            },
+            segments: 2
+         };
+
+         $scope.progressBarSettings4 = {
+            width: 200,
+            percentage: 11,
+            segments: 2
+         };
+
+      }
+   })(window.location.href);
+</script>
+
+</body>
+</html>
