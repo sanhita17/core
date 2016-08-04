@@ -1,0 +1,52 @@
+<sub-navbar show-district-selector hide-district-drop-down></sub-navbar>
+
+<scrollable-region page-has-subnav>
+
+   <page-header settings="pageHeaderSettings"></page-header>
+
+   <table class="content-table" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+         <tr>
+            <th><div><span>NAME</span></div></th>
+            <th><div><span>SCHOOL</span></div></th>
+            <th><div><span>ROLES</span></div></th>
+            <th><div><span>CLASSES</span></div></th>
+            <th><div><span>STUDENTS</span></div></th>
+            <!-- th><div><span>LAST <br class="forcewrap"/>ACTIVE</span></div></th -->
+            <th><div><span>EMAIL</span></div></th>
+            <!-- th></th -->
+            <th></th>
+         </tr>
+      </thead>
+      <tbody>
+      <tr ng-show="!userList">
+         <td colspan="9">
+            <div class="loading"></div>
+         </td>
+      </tr>
+      <tr ng-repeat="districtUser in userList | orderBy: ['personIndex', 'schoolIndex']" ng-class="{'odd_row':districtUser.personIndex%2==0,'even_row':districtUser.personIndex%2!=0,'light':districtUser.schoolIndex%2==0,'dark':districtUser.schoolIndex%2!=0}">
+         <td>
+            <span class="userName" ng-if="!districtUser.hideName">
+               <div class="lastName">{{districtUser.person.user.lastName}}</div>
+               <div class="firstName">{{districtUser.person.user.firstName}}</div>
+            </span>
+         </td>
+         <td><div>{{districtUser.school}}</div></td>
+         <td><div>{{districtUser.roles}}</div></td>
+         <td><div class="wrapper -wrapper"><span center-below-heading-text>{{districtUser.classCount}}</span></div></td>
+         <td><div class="wrapper -wrapper"><span center-below-heading-text>{{districtUser.studentCount}}</span></div></td>
+         <!-- td></td -->
+         <td>
+            <div><a href="mailto:{{districtUser.person.user.email}}" class="link">{{districtUser.person.user.email}}</a></div>
+         </td>
+         <!-- td><div class="link">View as user</div></td -->
+         <td style="position:relative">
+            <div class="-actions-dropdown" dropdown>
+               <button class="--icon --icon_btn_downArrow" dropdown-toggle disabled ng-click="staffOptionsClicked($index)"></button>
+            </div>
+         </td>
+      </tr>
+      </tbody>
+   </table>
+
+</scrollable-region>

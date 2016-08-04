@@ -1,0 +1,12 @@
+.-wrapper{
+   position:relative;
+   display:block;
+   height:40px;
+   width:0;
+   text-align:center;
+}
+.-wrapper SPAN{
+   display:inline-block;
+   line-height:40px;
+   text-align:right;
+}
