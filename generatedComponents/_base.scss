@@ -1,0 +1,251 @@
+@import "compass/css3";
+
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+
+
+// Begin: Bootstrap Edits
+$body-bg: #efeee7;
+$body-border: darken($body-bg, 4%);
+
+$brand-primary: #007681;
+$brand-primary-hover: #2a9ea8;
+$brand-primary-less: #f2fbfc;
+$brand-selected-state: #babc16;
+$brand-selected-state-less: rgb(245,246,221);
+$brand-success: #5cb85c;
+$brand-success-hover: darken($brand-success, 5%);
+$brand-info: #5bc0de;
+$brand-info-hover: darken($brand-info, 5%);
+$brand-warning: #f0ad4e;
+$brand-warning-hover: darken($brand-warning, 5%);
+$brand-danger: #b71234;
+$brand-danger-alt: #ff0000;
+$brand-danger-hover: darken($brand-danger, 5%);
+$brand-protection: #8165b9;
+$brand-inactive: #b6ada5;
+
+$gray-lighter: lighten(#000, 93.5%);
+
+$brown-primary: #6e6259;
+$brown-secondary: #8c8279;
+$brown-primary-less: lighten($brown-primary, 25%);
+$brown-primary-lighten-50: lighten($brown-primary, 50%);
+$blue-primary: #2c3e50;
+
+$font-family-sans-serif: Arial, Helvetica, sans-serif;
+$font-family-ilfonts: 'Planer', Tahoma, Geneva, sans-serif; // try using the mixins just below instead of this variable
+$font-family-base: Tahoma, Geneva, sans-serif;
+
+// Please include these mixins when setting different font weights or italics:
+//    .mystyle1 { @include ilfonts-bold; color: $brown-primary /*etc.*/ }
+//    .mystyle2 { @include ilfonts-regular-italic; color: $brown-primary /*etc.*/ }
+// Using only $font-family-ilfonts above will not get you Planer Medium 
+// or Planer Light, and will use computer algorithms for bolding and 
+// italicizing, which are not the same as the Planer Bold or Planer Italic.
+@mixin ilfonts-extralight {
+    font-family: 'PlanerXL', Tahoma, Geneva, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+@mixin ilfonts-extralight-italic {
+    font-family: 'PlanerXLI', Tahoma, Geneva, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+@mixin ilfonts-light {
+    font-family: 'PlanerLight', Tahoma, Geneva, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+@mixin ilfonts-light-italic {
+    font-family: 'PlanerLI', Tahoma, Geneva, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+@mixin ilfonts-regular {
+    font-family: 'Planer', Tahoma, Geneva, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+@mixin ilfonts-regular-italic {
+    font-family: 'PlanerI', Tahoma, Geneva, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+@mixin ilfonts-medium {
+    font-family: 'PlanerMed', Tahoma, Geneva, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+@mixin ilfonts-medium-italic {
+    font-family: 'PlanerMI', Tahoma, Geneva, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+@mixin ilfonts-demibold {
+    font-family: 'PlanerDB', Tahoma, Geneva, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+@mixin ilfonts-demibold-italic {
+    font-family: 'PlanerDBI', Tahoma, Geneva, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+@mixin ilfonts-bold {
+    font-family: 'PlanerBold', Tahoma, Geneva, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+@mixin ilfonts-bold-italic {
+    font-family: 'PlanerBI', Tahoma, Geneva, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+@mixin ilfonts-extrabold {
+    font-family: 'PlanerEB', Tahoma, Geneva, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+@mixin ilfonts-extrabold-italic {
+    font-family: 'PlanerEBI', Tahoma, Geneva, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+$headings-font-family: $font-family-ilfonts;
+$headings-font-weight: normal;
+$headings-color: #666463;
+
+$workspace-details: #f6f5ee;
+
+$inactive: rgb(152,196,201);
+$disabled: #b6ada5;
+
+// These are the real sizes to add back when we do Responsive.
+//$screen-xs: 480px;
+//$screen-sm: 768px;
+//$screen-md: 992px;
+//$screen-lg: 1200px;
+
+//Reiterate Bootstrap Media Queries
+$screen-xs: 1px;
+$screen-sm: 2px;
+$screen-md: 3px;
+$screen-lg: 9999px;
+
+$screen-xs-min: $screen-xs;
+$screen-sm-min: $screen-sm;
+$screen-md-min: $screen-md;
+$screen-lg-min: $screen-lg;
+$screen-phone: $screen-xs-min;
+$screen-tablet: $screen-sm-min;
+$screen-desktop: $screen-md-min;
+$screen-lg-desktop: $screen-lg-min;
+$screen-xs-maxx: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+$grid-gutter-width: 25px;
+// Fix this once responsive is added.
+//$container-desktop: ((940px + $grid-gutter-width));
+$container-desktop: ((1140px + $grid-gutter-width));
+
+$icon-font-path: '../webfonts/bootstrap/';
+
+$btn-primary-border: $brand-primary; //Removes Darken Mixer
+$page-header-border-color: #ccc;
+
+// Navbar Changes
+$navbar-height: 78px;
+$navbar-padding-vertical:13px;
+$navbar-default-bg: #fff;
+$navbar-default-border: $body-bg;
+$navbar-default-link-active-bg: #fff;
+$navbar-default-link-active-color: $brand-primary;
+$navbar-default-link-hover-color: #fff;
+
+$dropdown-caret-color: #898989;
+// End: Bootstrap Edits
+
+$background-alt: #5e6871;
+$background-alt-hover:#03e3e3;
+$card-height: 308px;
+
+$content-default-bg:#fff;
+$content-secondary-bg:$brand-primary;
+$content-secondary-text:#fff;
+$content-secondary-text-hover:#463b36;
+
+$dropdown-select-color: #554741;
+$dropdown-select-border: #554741;
+
+$breadcrumb-padding-horizontal:0;
+$breadcrumb-padding-vertical:0;
+$breadcrumb-bg:transparent;
+$breadcrumb-color:#000;
+$breadcrumb-separator: ">";
+$tooltip-max-width:none;
+
+// IL Variable Set
+$brand-selected-dark : #77706d;
+$brand-highlight: #ff7900;
+$brand-highlight-alt: #cdce76;
+$brand-highlight-third: #FFC72C;$modal-footer-bg: #ecf0f1;
+$modal-content-bg: #f9fafb;
+
+
+// Vertically Align an element
+
+//// Put this in the parent of the element you want to align
+%parent-valign {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+//// Call this in the child
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+// Gradient Background
+
+%gradient {
+  background: rgb(255,255,255); /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGQ3Y2QiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(216,215,205) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,255)), color-stop(100%,rgb(216,215,205))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgb(255,255,255) 0%,rgb(216,215,205) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgb(255,255,255) 0%,rgb(216,215,205) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgb(255,255,255) 0%,rgb(216,215,205) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgb(255,255,255) 0%,rgb(216,215,205) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d7cd',GradientType=0 ); /* IE6-8 */
+}
+
+%gradient-active {
+  background: rgb(255,255,255); /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGQ3Y2QiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgb(216,215,205) 0%), rgb(255,255,255) 100%; /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(216,215,205)), color-stop(100%,rgb(255,255,255))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgb(216,215,205) 0%,rgb(255,255,255) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgb(216,215,205) 0%,rgb(255,255,255) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgb(216,215,205) 0%,rgb(255,255,255) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgb(216,215,205) 0%,rgb(255,255,255) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8d7cd', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+}
+
+// pipeline colors
+
+$pipe-odd-row: #fff;
+$pipe-even-row: #f3f2ed;
+$pipe-header-divider: #847972;
+$pipe-dark-divider: #d5cbc2;
+$pipe-light-divider: #f1eeeb;

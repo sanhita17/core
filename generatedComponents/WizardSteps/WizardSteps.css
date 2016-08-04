@@ -1,0 +1,132 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.wzStepCircle, .wzBreadCrumb > li.active a > span, .wzBreadCrumb > li:not(.active) > a > span, .wzStepCircleInactive, .wzStepCircleDone {
+  position: relative;
+  -webkit-box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  border: 5px #fff solid;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+  color: #fff;
+  font-family: 'PlanerMed', Tahoma, Geneva, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 27px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 50px;
+  display: inline-block;
+  z-index: 3; }
+
+.wzBreadCrumb > li.active a > span {
+  /*.wzStepCircleActive*/
+  background-color: #6e6259 !important; }
+
+.wzBreadCrumb > li:not(.active) > a > span, .wzStepCircleInactive, .wzStepCircleDone {
+  background-color: #007681; }
+
+.wzBreadCrumb li.active .wzDoneCheck {
+  display: none; }
+.wzBreadCrumb li.active ~ li .wzDoneCheck {
+  display: none; }
+
+.wzDoneCheck {
+  position: relative;
+  font-size: 24px;
+  color: #babc16;
+  width: 23px;
+  height: 22px;
+  background-repeat: no-repeat;
+  margin: 10px 0 0 -10px;
+  z-index: 10;
+  text-shadow: -3px 0 #fff, 0 3px #fff, 3px 0 #fff, 0 -3px #fff; }
+
+.wzText {
+  position: relative;
+  top: 50px;
+  left: -100px;
+  color: #000;
+  text-align: center;
+  width: 150px;
+  display: inline-block;
+  margin-right: -150px;
+  z-index: 2;
+  height: 50px; }
+
+.wzBreadCrumb > li:before {
+  content: "";
+  padding: 0;
+  margin: 0;
+  display: none; }
+
+.wzBreadCrumb > li:after {
+  display: block;
+  border-top: 5px #fff solid;
+  -webkit-box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  position: relative;
+  content: "";
+  /*    padding:0;
+      margin:0 -10px 0 -10px;*/
+  left: 20px;
+  top: -45px;
+  z-index: 2;
+  width: 100%; }
+
+.wzBreadCrumb > li:last-child:after {
+  display: none; }
+
+.wzBreadCrumb {
+  width: 90%;
+  margin: 0 0 0 40px;
+  padding: 0;
+  border: 0; }
+
+.wzBreadCrumb li:first-child:nth-last-child(1) {
+  width: 98%; }
+
+.wzBreadCrumb li:first-child:nth-last-child(2),
+.wzBreadCrumb li:first-child:nth-last-child(2) ~ li {
+  width: 24%; }
+
+/* three items */
+.wzBreadCrumb li:first-child:nth-last-child(3),
+.wzBreadCrumb li:first-child:nth-last-child(3) ~ li {
+  width: 24%; }
+
+.wzBreadCrumb li:first-child:nth-last-child(4),
+.wzBreadCrumb li:first-child:nth-last-child(4) ~ li {
+  width: 24%; }
+
+.wzBreadCrumb li:first-child:nth-last-child(5),
+.wzBreadCrumb li:first-child:nth-last-child(5) ~ li {
+  width: 19%; }
+
+.wzBreadCrumb li:first-child:nth-last-child(6),
+.wzBreadCrumb li:first-child:nth-last-child(6) ~ li {
+  width: 16%; }
+
+.wzBreadCrumb li:last-child {
+  width: 60px; }
+
+/*.wzLabel{
+    color: $headings-color;
+}*/
+/*.wzLabelActive{
+    @extend .wzLabel;
+    color: $brand-selected-state;
+}
+.wzLabelDone{
+    @extend .wzLabel;
+    color: $brand-success;
+}
+.wzLabelInactive{
+    @extend .wzLabel;
+    color: $headings-color;
+}*/
+
+/*# sourceMappingURL=WizardSteps.css.map */

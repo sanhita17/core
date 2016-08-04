@@ -1,0 +1,70 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+/* line 9, SearchBarFullWidth.scss */
+.searchbar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  height: 36px;
+  padding: 0;
+  margin: 0 82px 0 0;
+  height: 36px;
+}
+/* line 18, SearchBarFullWidth.scss */
+.searchbar input {
+  vertical-align: text-top;
+  border: 1px solid #6e6259;
+  color: #b6ada5;
+  padding: 10px;
+  font-size: 12px;
+  height: 36px;
+  margin: 0;
+  width: 100%;
+}
+/* line 29, SearchBarFullWidth.scss */
+.searchbar .searchbar-button-box {
+  vertical-align: text-top;
+  display: inline-block;
+  width: 82px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #6e6259;
+  border-right: 1px solid #6e6259;
+  border-bottom: 1px solid #6e6259;
+  text-align: left !important;
+}
+/* line 40, SearchBarFullWidth.scss */
+.searchbar .searchbar-button-box .btn.btn-default {
+  text-align: center !important;
+  box-sizing: border-box;
+  width: 33px !important;
+  min-width: 33px !important;
+  max-width: 33px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  max-height: 24px !important;
+  padding: 0;
+  margin: 5px 0 0 5px;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  background-color: #f8f8f5;
+  -moz-box-shadow: inset 0 -4px 2px #dddddd;
+  -webkit-box-shadow: inset 0 -4px 2px #dddddd;
+  box-shadow: inset 0 -4px 2px #dddddd;
+}
+/* line 58, SearchBarFullWidth.scss */
+.searchbar .searchbar-button-box .btn.btn-default .ilicon {
+  top: 0;
+  left: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 16px;
+  color: #6e6259;
+}
+
+/* line 72, SearchBarFullWidth.scss */
+.filter-box ~ .searchbar {
+  margin: 0 82px 0 46px;
+}

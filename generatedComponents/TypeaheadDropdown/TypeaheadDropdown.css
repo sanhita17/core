@@ -1,0 +1,26 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.ui-autocomplete {
+  display: block; }
+  .ui-autocomplete.ilp {
+    list-style-type: none;
+    max-height: 187px;
+    background-color: #FFF;
+    color: #007681;
+    border: 1px solid #CCC;
+    border-top: 0;
+    padding: 0;
+    overflow-y: auto; }
+    .ui-autocomplete.ilp li {
+      height: 35px;
+      list-style-type: none;
+      padding-left: 10px;
+      padding-top: 6px; }
+      .ui-autocomplete.ilp li:hover {
+        background-color: #007681;
+        color: #FFF; }
+        .ui-autocomplete.ilp li:hover a {
+          display: block;
+          color: #FFF;
+          text-decoration: none; }
+
+/*# sourceMappingURL=TypeaheadDropdown.css.map */

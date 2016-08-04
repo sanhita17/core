@@ -1,0 +1,256 @@
+@import "variables";
+
+@mixin square-menu{
+    position:absolute;
+    box-shadow:0 8px 8px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, .2);
+    border: 1px solid #acacac;
+    @include border-bottom-radius(0);
+    @include border-top-radius(0);
+    margin: 0;
+    padding: 0;
+    max-height: 185px;
+    overflow-y: auto;
+    li{
+        a{
+            white-space:nowrap;
+            color: $brown-primary;
+            font-size: 13px;
+            line-height: 13px;
+            padding: 12px 14px;
+        }
+        &:nth-child(odd), &:nth-child(even){
+          a:hover{
+            background-color: $brand-primary-hover;
+            color: #fff;
+          }
+        }        
+        &:nth-child(odd){
+            a{
+                background-color: #FFF;
+            }
+        }
+        &:nth-child(even){
+            a{
+                background-color: $body-bg;
+            }
+        }
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+    label{
+        display: inline-block;
+    }
+}
+.dropdown {
+    &.square-drop {
+        @include border-radius(0px);
+    }
+}
+// Open state for the dropdown-button
+.dropdown-button.open {
+    // Show the menu
+    > .dropdown-menu {
+    }
+    // Remove the outline when :focus is triggered
+    > a {
+        //background-color:#fff;
+    }
+    .dropdown-toggle {
+        background-color: $brand-primary-hover !important;
+        border-color: $brand-primary-hover !important;
+    }
+}
+.dropdown{
+    display:inline;
+}
+.dropdown-button{
+    &.stripped-select{
+        .dropdown-menu{
+            @include square-menu;
+            //left:12px;
+            left:auto;
+            right:16px;
+            top:30px;
+/*            min-width:auto;
+            max-width:auto;*/
+        }
+        
+        .dd-menu-left{
+            right:auto;
+            left:16px;
+            top:30px;
+        }
+    }
+}
+.dropdown-select {
+    display:inline-block;
+    &.btn-group {
+        border:1px solid $dropdown-select-border;
+    }
+    &.stripped-select{
+        display: block;
+        button{
+            background-color: #fff;
+            border: 1px solid #acacac;
+            @include border-radius(4px);
+            height: 33px;
+            padding-top: 6px;
+            width: 100%;
+            .ilicon {
+                font-size: 14px;
+                right: 14px;
+                top: 14px;
+                left:auto;
+                margin:0;
+                padding:0;
+            }
+        }
+        .dropdown-menu{
+            @include square-menu;
+            li{
+                a{
+                     white-space:normal;
+                }
+            }
+        }
+        &.open > .btn-default.dropdown-toggle{
+            background-color: #fff !important;
+        }
+    }
+    button {
+        font-family: $font-family-base;
+        display:inline;
+        font-size:13px;
+        padding:7px 12px;
+        text-align:left;
+        background-color:transparent;
+        border:0;
+        @include border-radius(50px);
+        &:hover {
+            cursor:pointer;
+            text-decoration:none;
+            .ilicon {
+                color: $brown-primary;
+            }
+        }
+        &:focus { outline:inherit;
+        }
+        &.btn-sm {
+            background-color:#afafaf;
+            border:0;
+            padding:4px 8px;
+            span { color:#fff;
+                   font-size:12px;
+                   line-height:16px;
+            }
+            .dropdown-select-text {
+                width:75px;
+            }
+        }
+        label, .dropdown-select-text, .caret {
+            color:$brand-primary;
+            font-family: $font-family-base;
+        }
+        label {
+            font-weight:normal;
+            margin:0;
+            padding:0;
+        }
+        .ilicon {
+            color:$brand-primary;
+            font-size:25px;
+            position:absolute;
+            right:4px;
+            top:4px;
+            &:hover {
+                color: $brown-primary;
+            }
+        }
+        .dropdown-select-text {
+/*            min-width:90px;*/
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display:inline-block;
+            text-align:left;
+            font-family: $font-family-base;
+            font-size:13px;
+            padding-right:18px;
+            /*margin-right: 22px;*/
+            width:100%;
+            &:focus {
+                outline-style:none;
+            }
+        }
+    }
+    .dropdown-menu {
+        @include square-menu;
+        left:0;
+        //right:35px
+        right:0;
+    }
+    
+    
+}
+
+.scroll-fix .dropdown-menu {
+    position: fixed;
+    margin: 0;
+}
+
+//add margin to left side if searchbar is the preceding sibling
+.searchbar ~ .dropdown {
+/*    display:inline-block;*/
+    margin-left:$btn-margin;
+}
+
+
+/*
+.addfile-btn, .delete-btn, .details-files-toolbar {
+    .dropdown-menu {
+        box-shadow:0 8px 8px rgba(0, 0, 0, 0.20);
+        -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.20);
+        color:$dropdown-select-color;
+        font-size:12px;
+        padding:0;
+        max-width: 400px;
+        margin: 0 5%;
+        > li > a {
+            padding:10px 14px;
+            background-color: $body-bg;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &.selected {
+                color: $brown-primary;
+                &:before {
+                    content: "\2713";
+                    font-size: 14px;
+                    text-align: right;
+                    float:right;
+                    line-height: 0;
+                    position: relative;
+                    top: 10px;
+                    right: -8px;
+                }
+            }
+            &:hover {
+                background-color:$brand-primary;
+                color: $gray-lighter;
+            }
+        }
+        .divider {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+.dropdown-sharedwith {
+    position: relative;
+    + .dropdown-menu {
+        position: fixed;
+        width: 178px;
+        margin: 0;
+    }
+}*/

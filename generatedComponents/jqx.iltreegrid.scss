@@ -1,0 +1,202 @@
+@import "base";
+
+/*no rounded corners*/
+.jqx-rc-tl-iltreegrid {-moz-border-radius-topleft: 0px;-webkit-border-top-left-radius: 0px;border-top-left-radius: 0px;}.jqx-rc-tr-iltreegrid {-moz-border-radius-topright: 0px;-webkit-border-top-right-radius: 0px;border-top-right-radius: 0px;}.jqx-rc-bl-iltreegrid {-moz-border-radius-bottomleft: 0px;-webkit-border-bottom-left-radius: 0px;border-bottom-left-radius: 0px;}.jqx-rc-br-iltreegrid {-moz-border-radius-bottomright: 0px;-webkit-border-bottom-right-radius: 0px;border-bottom-right-radius: 0px;}.jqx-rc-t-iltreegrid {-moz-border-radius-topleft: 0px;-webkit-border-top-left-radius: 0px;border-top-left-radius: 0px;-moz-border-radius-topright: 0px;-webkit-border-top-right-radius: 0px;border-top-right-radius: 0px;}.jqx-rc-b-iltreegrid {-moz-border-radius-bottomleft: 0px;-webkit-border-bottom-left-radius: 0px;border-bottom-left-radius: 0px;-moz-border-radius-bottomright: 0px;-webkit-border-bottom-right-radius: 0px;border-bottom-right-radius: 0px;}.jqx-rc-r-iltreegrid {-moz-border-radius-topright: 0px;-webkit-border-top-right-radius: 0px;border-top-right-radius: 0px;-moz-border-radius-bottomright: 0px;-webkit-border-bottom-right-radius: 0px;border-bottom-right-radius: 0px;}.jqx-rc-l-iltreegrid {-moz-border-radius-topleft: 0px;-webkit-border-top-left-radius: 0px;border-top-left-radius: 0px;-moz-border-radius-bottomleft: 0px;-webkit-border-bottom-left-radius: 0px;border-bottom-left-radius: 0px;}.jqx-rc-all-iltreegrid {-moz-border-radius: 0px;-webkit-border-radius: 0px;border-radius: 0px;}
+
+.jqx-reset-iltreegrid{
+    box-sizing: border-box !important;
+    width:100% !important;
+}
+
+.jqx-tree-dropdown-root-iltreegrid {
+  width: 100% !important; // have to use important to overwrite the grids js styles.
+  font-size: 13px;
+  color: $brown-primary;
+}
+
+.jqx-widget-iltreegrid .jqx-grid-cell-iltreegrid {
+  padding: 9px 15px;
+  border-color: $pipe-dark-divider;
+}
+
+.jqx-tree-item-li-iltreegrid > div {
+  width: 100%;
+}
+
+.jqx-tree-item-li-iltreegrid {
+  border-bottom: 1px solid #d5cbc2;
+
+  &:last-child {
+    border-bottom: 0 transparent;
+  }
+}
+
+
+
+
+.jqx-icon-arrow-right-iltreegrid, .jqx-icon-arrow-down-iltreegrid {
+  background-image: none;
+  background: none;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'ilicons';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke-width: 0.1px;
+  color: $brand-primary;
+  font-size: 10px;
+}
+
+.jqx-icon-arrow-right-iltreegrid {
+  &:before {
+    content: "\e649";
+  }
+}
+
+.jqx-icon-arrow-down-iltreegrid {
+  top: 2px;
+  &:before {
+    content: "\e648";
+  }
+}
+
+.jqx-grid-cell-pinned-iltreegrid {
+  background-color: #fff;
+  border-right-width: 1px !important;
+}
+
+.jqx-widget-content-iltreegrid {
+    border-color: $pipe-dark-divider;
+    font-size: 16px;
+}
+.jqx-widget-content-iltreegrid .ilicon {
+    font-size: 16px;
+}
+/*.jqx-widget-iltreegrid */
+.jqx-grid-column-header-iltreegrid {
+    background-color: $brown-primary;
+    color: #fff;
+}
+
+.jqx-widget-iltreegrid .jqx-grid-column-header-iltreegrid > div > div {
+  /*.jqx-widget-iltreegrid .jqx-grid-column-header-iltreegrid {*/
+  padding-left: 15px;
+}
+
+.jqx-fill-state-hover-iltreegrid, .jqx-fill-state-pressed-iltreegrid, .jqx-fill-state-selected-iltreegrid, .jqx-tree-item-li-iltreegrid:hover > div {
+    background-color: $brand-primary-hover;
+    color: #fff;
+
+  .jqx-icon-arrow-right-iltreegrid, .jqx-icon-arrow-down-iltreegrid {
+    color: #fff;
+  }
+}
+
+ul.jqx-tree-dropdown-iltreegrid {
+
+  + .jqx-tree-item-li-iltreegrid:hover > div {
+    background-color: transparent;
+    color: $brown-primary;
+  }
+}
+
+.jqx-icon-arrow-right-iltreegrid, .jqx-icon-arrow-right-hover-iltreegrid, .jqx-icon-arrow-right-selected-iltreegrid, .jqx-icon-arrow-down-iltreegrid, .jqx-icon-arrow-down-hover-iltreegrid, .jqx-icon-arrow-down-selected-iltreegrid {
+    //background-image: url('');
+}
+
+.jqx-cell-iltreegrid{
+    color:$brown-primary;
+}
+
+.jqx-cell-highlighted-iltreegrid{
+    //color: $brand-primary-hover;
+}
+
+.jqx-widget-iltreegrid .jqx-cell-ilicon-iltreegrid > div > div { 
+    padding:0 !important;
+    text-align:center !important;
+}
+
+.jqxtreebox {
+  &.jqx-widget-content {
+    border-color: transparent;
+  }
+
+  &.jqx-grid-iltreegrid {
+    border-color: #d5cbc2;
+  }
+}
+
+.circle:before, .circle:after{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.circle{
+  position: relative;
+  height: 12px;
+  width: 12px;
+  padding: 0;
+  background-color: $brand-danger;
+  border-radius: 150px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  display: block;
+}
+
+.circlePop {
+  cursor: pointer;
+}
+
+.nestedTree .jqx-grid-table-iltreegrid {
+  tbody {
+    .jqx-fill-state-hover-iltreegrid, .jqx-fill-state-pressed-iltreegrid, .jqx-fill-state-selected-iltreegrid {
+      &:nth-of-type(-n+2) {
+        background-color: $brand-primary-hover;
+        color: #fff;
+      }
+
+      .jqx-icon-arrow-right-iltreegrid, .jqx-icon-arrow-down-iltreegrid {
+        color: #fff;
+      }
+    }
+
+    tr:nth-child(even) {
+      .jqx-grid-cell-pinned {
+        background-color: #f9f9f9;
+      }
+
+      .jqx-fill-state-hover-iltreegrid, .jqx-fill-state-pressed-iltreegrid, .jqx-fill-state-selected-iltreegrid {
+        &:nth-of-type(-n+2){
+          background-color: $brand-primary-hover;
+          color: #fff;
+        }
+
+        .jqx-icon-arrow-right-iltreegrid, .jqx-icon-arrow-down-iltreegrid {
+          color: #fff;
+        }
+      }
+    }
+    tr {
+      td {
+        &.jqx-fill-state-hover-iltreegrid, &.jqx-fill-state-pressed-iltreegrid, &.jqx-fill-state-selected-iltreegrid{
+          &:nth-of-type(n+3){
+            background-color: #fff;
+
+            &.jqx-grid-cell-alt {
+              background: #f9f9f9;
+            }
+          }
+        }
+      }
+    }
+  }
+}

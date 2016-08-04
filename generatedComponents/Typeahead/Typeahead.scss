@@ -1,0 +1,27 @@
+@import "../base";
+
+.typeahead{
+    display:inline-block;
+    border: 1px solid $brown-primary;
+    box-sizing:border-box;
+    margin:0;
+/*    padding:0;*/
+    width:100%;
+    max-width:325px; //355
+    min-width:250px; //355
+    height:36px;
+    vertical-align:middle;
+}
+
+h3 ~ .typeahead{
+    margin-left:20px;
+}
+
+.typeahead ~ a{
+    margin-left:20px;
+}
+
+.typeaheadFull{
+    width:100%;
+    max-width:none;
+}

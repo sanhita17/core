@@ -1,0 +1,125 @@
+@import "../_base";
+@import "../_buttons";
+@import "../_dropdowns";
+@import "../_forms";
+
+.infobox-popover{
+    margin:0 !important;
+    padding:0;
+    border:0;
+    .arrow {
+        display:none !important;
+    }
+    
+    .popover-content {
+        padding:0;
+    }
+}
+.omnimenu-popover{
+    margin-top:0 !important;
+    background-color: $body-bg;
+    border-color: $brown-primary;
+    max-width:none !important;
+    @include border-bottom-radius(0);
+    @include border-top-radius(0);
+
+    .arrow {
+        display:none !important;
+/*        border-bottom-color: $brown-primary;
+        left: 15% !important;
+
+        &:after {
+            border-bottom-color: #fff;
+        }*/
+    }
+    
+    .popover-content {
+        border:0;
+        background-color: $body-bg;
+        margin:0 !important;
+        padding: 19px 0 19px 0 !important;
+        min-width: 100px;
+        width: 100%;
+        ul {
+            &.toolbar-items {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width:100%;
+
+                li {
+                    &.disable:hover {
+                        background-color: $body-bg;
+                        border-bottom:1px $body-bg solid;
+                        border-top:1px $body-bg solid;
+                        a{
+                            color:$brown-primary;
+                        }
+                    }
+
+                    border-left:0;
+                    border-right:0;
+                    border-bottom:1px $body-bg solid;
+                    border-top:1px $body-bg solid;
+                    color: $brown-primary;
+                    line-height: 24px;
+                    padding: 2px 10px 1px 10px;
+                    //border-bottom: 1px solid $brand-inactive;
+                    white-space: nowrap;
+                    margin:0 -1px 0 -1px;
+
+                    &:last-child {
+                        border-bottom: transparent;
+                    }
+
+                    &:hover {
+                        background-color: $brand-primary;
+                        border-bottom:1px $brown-primary solid;
+                        border-top:1px $brown-primary solid;
+                        a{
+                            color:#fff;
+                        }
+                    }
+
+                    a {
+                        color: $brown-primary;
+                        text-decoration: none;
+                        padding: 0 10px 0 2px;
+                        margin:0;
+                        font-family:$font-family-base;
+                        font-size: 14px;
+                        font-weight:500;
+                    }
+                    hr{
+                        border-color:#cbcdcc;
+                    }
+                }
+            }
+        }
+
+        .ilicon-close{
+            float:right;
+            margin:4px;
+        }
+    }
+}
+    
+.popover.bottom > .arrow {
+    border-bottom-color: $brown-primary;
+}
+
+.popover-btn{
+    background-color: transparent;
+    color:$brand-primary;
+    border:0;
+    //font-size: 30px;
+    padding-left: 0;
+    margin-right: 3px;
+    text-align:left;
+}
+
+.popover-infobox-btn{
+    height:0px;
+    max-height:0px;
+    margin:0;padding:0;border:0;
+}

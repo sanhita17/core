@@ -1,0 +1,24 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.typeahead {
+  display: inline-block;
+  border: 1px solid #6e6259;
+  box-sizing: border-box;
+  margin: 0;
+  /*    padding:0;*/
+  width: 100%;
+  max-width: 325px;
+  min-width: 250px;
+  height: 36px;
+  vertical-align: middle; }
+
+h3 ~ .typeahead {
+  margin-left: 20px; }
+
+.typeahead ~ a {
+  margin-left: 20px; }
+
+.typeaheadFull {
+  width: 100%;
+  max-width: none; }
+
+/*# sourceMappingURL=Typeahead.css.map */

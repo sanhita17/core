@@ -1,0 +1,24 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.statusbar-success {
+  background-color: #babc16; }
+
+.statusbar-info {
+  background-color: #5bc0de; }
+
+.statusbar-warning {
+  background-color: #f0ad4e; }
+
+.statusbar-danger {
+  background-color: #b71234; }
+
+.statusbar {
+  padding: 10px;
+  color: #000;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px; }
+  .statusbar .ilicon {
+    margin-right: 10px;
+    margin-left: 10px; }
+
+/*# sourceMappingURL=StatusBar.css.map */

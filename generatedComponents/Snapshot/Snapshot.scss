@@ -1,0 +1,40 @@
+@import "../_base";
+
+.ss-outer{
+    width:100%;
+}
+
+.ss-cell{
+    float:left;
+    font-size:36px;
+    text-align:center;
+    display:inline-block;
+}
+
+.ss-label{
+    font-size:12px;
+    display:block;
+}
+
+.ss-cell-5{
+    @extend .ss-cell;
+    width:20%;
+}
+
+.ss-cell-4{
+    @extend .ss-cell;
+    width:25%;
+}
+
+.ss-cell-3{
+    @extend .ss-cell;
+    width:33%;
+}
+
+.ss-div{
+    border-left:solid 1px $brown-primary;
+    height:100%;
+    min-height:100%;
+    position:relative;
+    top:10px;
+}

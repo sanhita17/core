@@ -1,0 +1,309 @@
+@import "./base";
+@import "./variables";
+//@import "../bower_components/sass-bootstrap/lib/bootstrap";
+@import "../lib/css/bootstrap";
+
+//BOOTSTRAP OVERRIDES
+@import "./buttons";
+@import "./headers";
+@import "./forms";
+@import "./card";
+
+html {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html,body
+{
+    height: 100%;
+    color:$brown-primary;
+}
+
+p{
+    color:#000;
+    margin:0;
+    padding:0;
+}
+
+footer{
+    border-top:1px $brown-secondary solid;
+    text-align:right;
+    height: $footer-height;
+    position: fixed;
+    left:$navbar-width;
+    bottom:0;
+    right:0;
+    z-index:9;
+    width: 100%; 
+    background-color: $body-bg;
+    -moz-box-shadow:    0px -3px 2px 2px #DDD;
+    -webkit-box-shadow: 0px -3px 2px 2px #DDD;
+    box-shadow:         0px -3px 2px 2px #DDD;
+    span{
+        display:inline-block;
+        @include ilfonts-medium;
+        color: $brown-primary;
+        padding:10px 83px;
+        margin:0;
+    }
+}
+
+header {
+    height:$header-height;
+    margin: 0 0 $row-margin 0; 
+    padding:0;
+    background-color: $body-bg;
+    position: relative;
+    z-index:1;
+    h2{
+        .ilicon{
+            line-height:22px;
+            font-size:22px;
+        }
+
+        a:last-child {
+            margin-left:20px;
+        }
+        a:only-child{
+            margin-left:0;
+        }
+
+        margin-bottom:$row-margin;
+    }
+}
+
+.outer-wrap{
+    min-width:(1024px - $navbar-width) !important;
+    //min-height:768px !important;
+    /*position:fixed;
+    top: 39px;
+    bottom:$footer-height;
+    right:0;
+    left:$navbar-width;
+    border-top: $full-frame-border-width $brown-primary solid; 
+    border-right: $full-frame-border-width $brown-primary solid; 
+    border-bottom: $full-frame-border-width $brown-primary solid;*/
+    padding: 0 $body-padding 0 ($body-padding+$navbar-width);
+/*    header{
+        padding-top:39px;
+    }*/
+}
+
+.main-wrap{
+    height: 100%;
+    margin-top: -($header-height+$row-margin);
+    //margin-bottom: -($footer-height);
+    padding: ($header-height+$row-margin) $body-padding $footer-height $body-padding;
+}
+
+.main-wrap-no-header{
+    @extend .main-wrap;
+    margin: -4px 0 (-$footer-height);
+    padding: 4px 0 $footer-height;
+}
+
+.content {
+    height:100% !important;
+    min-height:100% !important;
+    //overflow-y:hidden;
+    //position:absolute;
+/*    bottom:0px;
+    left:$body-padding;
+    right:$body-padding;
+    top: ($header-height+$row-margin);*/
+    padding:0;
+    margin:0;
+    .tab-content{
+        height:100% !important;
+        min-height:100% !important;
+        .tab-pane{
+            height:100% !important;
+            min-height:100% !important;
+            .container-fluid {
+                height:100% !important;
+                min-height:100% !important;
+                .row{
+                    height:100% !important;
+                    min-height:100% !important;
+                    //margin-bottom:$row-margin;
+                    [class^="col-"], [class*=" col-"]{
+                        position:relative;
+                        bottom:0;
+                        height:100%;
+                        min-height:100%;
+                        padding-right:0px;
+                        padding-left:20px;
+                        > div {
+                            margin-bottom:$row-margin;
+                        }
+                    }
+                    [class^="col-"]:first-child, [class*=" col-"]:first-child{
+                        padding-left:0px;
+                    }
+                }
+                
+/*                .row ~ .row{
+                    margin-top:$row-margin;
+                    background-color:red;
+                }*/
+            }
+        }
+    }
+}
+
+/*.content-pane{
+    position:absolute;top:0;overflow-y:auto;bottom:0;
+}
+
+.content-pane-left{
+    @extend .content-pane;
+    left:0;
+}
+.content-pane-right{
+    @extend .content-pane;
+    right:0;
+}*/
+
+
+.no-gutter{
+    padding-left:0;
+}
+
+.no-h-pad{
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+.header-bar{
+    padding:10px 0 10px 0;
+    background-color:lighten($body-bg,4%);
+}
+
+.bottom-row{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    /*    right:0;*/
+}
+
+.top-row{
+    position:absolute;
+    top:0;
+    width:100%;
+    /*    right:0;*/
+}
+
+.bg-darker{
+    background-color: darken($body-bg, 5%);
+}
+
+.topbarcont{
+/*    height: auto;*/
+    margin-bottom:$row-margin;
+    z-index:1;
+    /*   overflow: hidden;*/
+}
+.topbarleft{
+    width: 375px;
+    float: left;
+}
+.topbarstretch{
+    white-space:nowrap;
+}
+
+.page-grid-collapsed{
+    float:left;
+    width:39px;
+}
+.page-grid-expanded{
+    margin-left:39px !important;
+/*    margin-right:39px !important;*/
+}
+.page-grid-collapse-box{
+    box-sizing:border-box !important;
+    border:0;
+/*    border: 1px solid $pipe-dark-divider;*/
+/*    background-color:#fff;*/
+    .page-grid-collapse-header{
+        //width:100%;
+        border: 1px solid $pipe-dark-divider;
+        border-bottom-width:0;
+        margin-bottom:0 !important;
+        background-color:$brown-primary;
+        text-align:right;
+        .ilicon{
+            color:#fff;
+            padding:9px;
+            font-size:16px;
+        }
+
+      &.text-center {
+        text-align: center;
+      }
+    }
+
+  .page-grid-collapse-body {
+    border: 1px solid #c7c7c7;
+    padding: 0;
+    background-color: #fff;
+    display: block;
+    min-height: 150px;
+  }
+}
+.pageGridCollapseButton, .pageGridCollapseButton2{
+    cursor:pointer;
+}
+
+.page-grid-main-content{
+    height:100%;
+    overflow-y:auto;
+/*    position:absolute;*/
+/*    top:0;*/
+    width:100%;
+/*    bottom:$footer-height !important;*/
+    > div {
+        margin-bottom:$row-margin;
+    }
+}
+
+.jqxtreebox{
+    box-sizing:border-box !important;
+    margin-bottom:0px !important;
+}
+
+.jqxtreerow{
+    height:100%;
+}
+
+.userInfoPanel{
+    float:right;
+    width:50%;
+}
+
+.jqxtree50{
+    float:left !important;
+    width:50% !important;
+}
+
+.infobox{
+    min-width:400px;
+    border:1px solid $brown-primary;
+    background-color:#fff;
+    h4{
+        padding:12px 20px 12px 20px;
+        background-color:$brown-primary;
+        color:#fff;
+        display:block;
+    }
+}
+
+.infocontent{
+    padding:30px;
+    p{margin-bottom:10px;}
+}

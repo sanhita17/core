@@ -1,0 +1,177 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+/* line 8, Tabset.scss */
+body.ie .tabset-content-tabs > li {
+  margin-bottom: 0;
+}
+
+/*
+.tabset-content-tabs li:first-child:nth-last-child(1) {
+    max-width: 98%;
+}
+
+.tabset-content-tabs li:first-child:nth-last-child(2),
+.tabset-content-tabs li:first-child:nth-last-child(2) ~ li {
+    max-width: 49%;
+}
+
+ three items 
+.tabset-content-tabs li:first-child:nth-last-child(3),
+.tabset-content-tabs li:first-child:nth-last-child(3) ~ li {
+    max-width: 33%;
+}
+
+.tabset-content-tabs li:first-child:nth-last-child(4),
+.tabset-content-tabs li:first-child:nth-last-child(4) ~ li {
+    max-width: 24%;
+}
+
+.tabset-content-tabs li:first-child:nth-last-child(5),
+.tabset-content-tabs li:first-child:nth-last-child(5) ~ li {
+    max-width: 19%;
+}
+
+.tabset-content-tabs li:first-child:nth-last-child(6),
+.tabset-content-tabs li:first-child:nth-last-child(6) ~ li {
+    max-width: 16.6%;
+}
+
+.tabset-content-tabs li:first-child:nth-last-child(7),
+.tabset-content-tabs li:first-child:nth-last-child(7) ~ li {
+    max-width: 14%;
+}
+
+.tabset-content-tabs li:first-child:nth-last-child(8),
+.tabset-content-tabs li:first-child:nth-last-child(8) ~ li {
+    max-width: 12.5%;
+}
+
+.tabset-content-tabs li:first-child:nth-last-child(9),
+.tabset-content-tabs li:first-child:nth-last-child(9) ~ li {
+    max-width: 11%;
+}
+
+.tabset-content-tabs li:first-child:nth-last-child(10),
+.tabset-content-tabs li:first-child:nth-last-child(10) ~ li {
+    max-width: 10%;
+}*/
+/* line 63, Tabset.scss */
+.tabset-content-tabs li {
+  -ms-flex: 1;
+}
+
+/* line 68, Tabset.scss */
+.tabset-content-tabs {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #6e6259;
+  margin-top: 1px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* line 82, Tabset.scss */
+.tabset-content-tabs.nav-tabs > li.active > a {
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: #6e6259;
+  background-color: transparent;
+}
+/* line 88, Tabset.scss */
+.tabset-content-tabs > li {
+  margin-bottom: -1px;
+  height: 51px;
+  max-height: 51px;
+  line-height: 20px;
+}
+/* line 94, Tabset.scss */
+.tabset-content-tabs > li > a {
+  line-height: 20px;
+  padding: 0 15px 0 15px;
+  font-family: "Planer", Tahoma, Geneva, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #007681;
+  text-align: center;
+}
+/* line 103, Tabset.scss */
+.tabset-content-tabs > li > a:hover {
+  color: #666;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+/* line 108, Tabset.scss */
+.tabset-content-tabs > li.active > .tab-caret:after, .tabset-content-tabs > li.active > .tab-caret:before, .tabset-content-tabs > li.active > .tab-caret:hover:after, .tabset-content-tabs > li.active > .tab-caret:hover:before {
+  bottom: -5px;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+/* line 119, Tabset.scss */
+.tabset-content-tabs > li.active > .tab-caret:after, .tabset-content-tabs > li.active > .tab-caret:hover:after {
+  border-color: rgba(239, 238, 231, 0);
+  border-bottom-color: #eeeee6;
+  border-width: 10px;
+  margin-left: -10px;
+}
+/* line 125, Tabset.scss */
+.tabset-content-tabs > li.active > .tab-caret:before, .tabset-content-tabs > li.active > .tab-caret:hover:before {
+  border-color: rgba(184, 182, 9, 0);
+  border-bottom-color: #6e6259;
+  border-width: 11px;
+  margin-left: -11px;
+}
+
+/*.truncate {
+  //width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}*/
+/*@-moz-document url-prefix() {
+    .tabset-content-tabs {
+        > li {
+            margin-bottom:0px;
+            height: 43px;
+        }
+    }
+}*/
+/*.details-date-container {
+    color: $brown-primary;
+    font-family: $font-family-ilfonts;
+    font-size: 14px;
+    float:right;
+    position: relative;
+    top:14px;
+
+    .form-group {
+        margin:-12px 0 0 0;
+        width:420px;
+
+        .calendar { z-index:3; position:absolute; right:85px; top:7px; font-size:18px; }
+    }
+
+    .details-content-date {
+        border: 0;
+        background-color: transparent;
+        width: 75px;
+        color: $brand-primary;
+        &:hover {
+            text-decoration: underline;
+            color: $brand-primary-hover;
+        }
+    }
+}*/

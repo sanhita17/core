@@ -1,0 +1,30 @@
+@import "../base";
+.ui-autocomplete {
+    display:block;
+    &.ilp {
+        list-style-type: none;
+        max-height: 187px;
+        background-color:#FFF;
+        color:$brand-primary;
+        border: 1px solid #CCC;
+        border-top: 0;
+        padding: 0;
+        overflow-y: auto;
+        li {
+            height: 35px;
+            list-style-type: none;
+            padding-left: 10px;
+            padding-top: 6px;
+
+            &:hover {
+                background-color: $brand-primary;
+                color:#FFF;
+                a {
+                    display:block;
+                    color: #FFF;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
