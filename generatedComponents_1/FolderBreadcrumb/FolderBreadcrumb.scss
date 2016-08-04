@@ -1,0 +1,26 @@
+@import "../base";
+
+.folderBreadcrumbRow{
+    margin:0;
+    padding-top:5px;
+    color:#fff;
+    font-size:14px;
+    background-color:$brand-primary;
+    vertical-align: middle;
+    .ilicon{
+        color:#fff;
+        font-size:20px;
+        padding:0;
+        margin:0;
+    }
+    span {
+        padding: 0px 10px 5px 10px;
+        background-color:$brand-primary;
+    }
+}
+
+.folderBreadcrumbRow:after{
+    content: "";
+    display: table;
+    clear: both;
+}

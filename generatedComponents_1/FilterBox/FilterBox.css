@@ -1,0 +1,133 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.requiredLabel {
+  margin-left: 5px;
+  text-transform: lowercase; }
+
+.form-group {
+  margin-bottom: 0px;
+  /*    max-width:750px;*/ }
+
+label {
+  font-weight: normal;
+  width: 100%; }
+
+label.checkbox-inline {
+  width: auto !important; }
+
+.input-label {
+  width: 100%;
+  color: #000;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: capitalize; }
+
+.form-control {
+  margin-top: 4px; }
+  .form-control:focus {
+    border: 1px solid #c0c0c0;
+    box-shadow: none;
+    -webkit-box-shadow: none; }
+
+.charLimit {
+  padding-top: 0;
+  margin-top: 5px;
+  font-size: 10px;
+  color: #555; }
+
+.dropdown:focus, textarea:focus {
+  outline: 0; }
+
+textarea {
+  resize: none; }
+
+.input-group .input-group-addon {
+  background-color: transparent;
+  border: 1px solid #333;
+  border-right: 0;
+  height: 30px !important;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0; }
+.input-group .form-control {
+  border: 1px solid #333;
+  padding: 6px 37px 6px 12px;
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0; }
+.input-group .input-group-btn {
+  position: relative;
+  left: -2px;
+  border: 1px solid #333;
+  border-left: 0;
+  height: 30px !important; }
+  .input-group .input-group-btn:last-child > .btn, .input-group .input-group-btn.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+    border: 1px solid #b6ada5;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px; }
+  .input-group .input-group-btn .btn-default {
+    background-color: transparent; }
+  .input-group .input-group-btn .btn {
+    /*            height: 26px;
+                margin: 2px 2px 2px 4px;
+                border: 0;
+                @include border-bottom-radius(4px);
+                @include border-top-radius(4px);
+                @extend %gradient;
+                //box-shadow: 0 0 5px #333;
+                padding: 6px 6px 6px 8px;
+    
+                .ilicon {
+                    top: -1px;
+                    font-size: 12px;
+                }*/ }
+
+.form-group ~ .form-group {
+  margin-top: 8px; }
+
+.form-checkbox ~ .form-checkbox {
+  margin-top: 0; }
+
+.filter-box {
+  padding: 20px 20px 0 20px;
+  margin-bottom: 20px;
+  border: 1px solid #d5cbc2;
+  background-color: #eee; }
+
+.filter-box-radios {
+  border-bottom: 1px solid #d5cbc2;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: #000; }
+  .filter-box-radios label {
+    padding-left: 20px;
+    color: #6e6259;
+    display: inline; }
+
+.filter-box-dropdowns .row {
+  margin-bottom: 20px !important; }
+  .filter-box-dropdowns .row .col-md-4 > .form-group {
+    margin-bottom: 0px !important; }
+  .filter-box-dropdowns .row .col-md-4 > .form-group > .input-label, .filter-box-dropdowns .row .dropdown {
+    font-size: 14px; }
+
+/*# sourceMappingURL=FilterBox.css.map */

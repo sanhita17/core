@@ -1,0 +1,162 @@
+@import "../base";
+
+.dynamic-filter-container {
+    position: relative;
+}
+
+.dynamic-filter-addon {
+    background-color: $brand-selected-state;
+    border: 1px solid $brown-primary;
+    border-right: 0;
+    color: #fff;
+    font-size: 16px;
+    height: 34px;
+    left: 0;
+    padding: 5px 9px;
+    position: absolute;
+}
+
+.dynamic-filter {
+    background-color: $body-bg;
+    color: $brown-primary;
+    font-family: $font-family-base;
+    height: 36px;
+    position: relative;
+    width: 518px;
+
+    .input-group-addon {
+        padding: 0;
+        
+        label {
+            font-size: 15px;
+            font-weight: normal;
+            margin: 0;
+            padding: 8px;
+        }
+    }
+
+    .form-control {
+        width: 324px;
+
+        &::-ms-clear {
+            display: none;
+        }
+    }
+
+    .input-group-btn {
+        left: 0;
+
+        .btn.btn-default {
+            font-size: 12px;
+            width: 50px;
+            
+            &.dropdown-toggle {
+                margin-left: 4px;
+                margin-right: 2px;
+                width: 50px;
+
+                span {
+                    font-size: 15px;
+                    font-weight: bold;
+                    // top: -3px;
+                }
+            }
+      
+            &.filter-reset {
+                margin-left: 3px;
+                margin-right: 4px;
+                padding-top: 4px;
+                width: 56px;
+            }
+
+            &:focus,
+            &:active,
+            &.active,
+            &.selected {
+                background-color: #dddbcf !important;
+            }
+
+            &.filter-reset.btn-clicked {
+                background-color: #dddbcf !important;
+                background-image: none !important;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0 !important;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, .20);
+        -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, .20);
+        color: $dropdown-select-color;
+        font-size: 12px;
+        padding: 0;
+        width: 324px;
+        left: -330px;
+        top: 32px;
+
+        > li {
+            background-color: $body-bg;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 2px 14px;
+            
+            > label {
+                font-weight: normal;
+                margin-bottom: 0;
+                padding-left: 10px;
+            }
+
+            > input {
+                position: relative;
+                top: 1px;
+            }
+            
+            > a {
+                background-color: $body-bg;
+                color: $brand-primary;
+                @include ilfonts-demibold;
+                font-size: 16px;
+                padding-left: 0;
+                
+                &:hover {
+                    background-color: $body-bg;
+                    color: $brand-primary;
+                    text-decoration: underline;
+                }
+            }
+
+            &.first-in-list-group {
+                padding-top: 10px;
+            }
+
+            &.last-in-list-group {
+                padding-bottom: 10px;
+            }
+
+            &.dropdown-header {
+                color: #666;
+                font-weight: normal;
+            }
+        }
+
+        .divider {
+            background-color: #ccc;
+            border-bottom: 1px solid #fff;
+            margin: 0;
+            padding: 0 0 1px 0;
+        }
+    }
+}
+
+.scroll-fix .dropdown-menu {
+    margin: 0;
+    position: fixed;
+}
+
+.dynamic-filter-aligner {
+    margin-top: -13px;
+}
+
+.dynamic-filter .input-group-btn.holds-dropdown{
+  width: 100%;
+}

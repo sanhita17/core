@@ -1,0 +1,19 @@
+@import "../base";
+
+.alertbadge{
+    display:inline-block;
+    width: 32px;
+    min-width: 32px !important;
+    height: 32px;
+    min-height: 32px !important;
+    font-family:$font-family-ilfonts;
+    font-weight:500;
+    padding-top: 4px;
+    font-size: 16px;
+    line-height: 1.33 !important;
+    -webkit-border-radius: 90px !important;
+    -moz-border-radius: 90px !important;
+    border-radius: 90px !important;
+    text-align:center;
+    background-color: $brand-selected-state;
+}

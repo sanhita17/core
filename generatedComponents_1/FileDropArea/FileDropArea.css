@@ -1,0 +1,33 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.filedropcol {
+  display: table;
+  height: 100% !important;
+  min-height: 100% !important; }
+
+.filedroptree {
+  display: table-row;
+  height: 1%; }
+
+.filedroparea {
+  display: table-row;
+  height: auto;
+  width: 100%;
+  background-color: white; }
+
+.filedropcontent {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+  .filedropcontent .ilicon {
+    font-size: 120pt;
+    margin-bottom: 40px;
+    color: #007681; }
+
+.filedroptab {
+  height: 100% !important;
+  min-height: 100% !important; }
+  .filedroptab .container-fluid, .filedroptab .container, .filedroptab .row {
+    height: 100% !important;
+    min-height: 100% !important; }
+
+/*# sourceMappingURL=FileDropArea.css.map */

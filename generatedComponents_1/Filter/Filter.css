@@ -1,0 +1,32 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.filter-toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: 0 20px;
+  margin: 4px 0 0 0; }
+  .filter-toggle .ilicon-filter {
+    color: #2a9ea8;
+    font-size: 24px; }
+  .filter-toggle .filter-caret:after, .filter-toggle .filter-caret:before, .filter-toggle > .filter-caret:hover:after, .filter-toggle > .filter-caret:hover:before {
+    bottom: -26px;
+    left: 50%;
+    border: solid;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    z-index: 100 !important; }
+  .filter-toggle .filter-caret:after, .filter-toggle > .filter-caret:hover:after {
+    border-color: rgba(239, 238, 231, 0);
+    border-bottom-color: #eee;
+    border-width: 10px;
+    margin-left: -10px; }
+  .filter-toggle .filter-caret:before, .filter-toggle > .filter-caret:hover:before {
+    border-color: rgba(184, 182, 9, 0);
+    border-bottom-color: #d5cbc2;
+    border-width: 11px;
+    margin-left: -11px; }
+
+/*# sourceMappingURL=Filter.css.map */

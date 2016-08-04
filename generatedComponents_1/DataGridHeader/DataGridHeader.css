@@ -1,0 +1,30 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.dataGridHeaderRow {
+  width: 100%;
+  border: 1px solid #d5cbc2;
+  border-width: 1px 1px 0 1px;
+  margin-bottom: 0px !important;
+  padding: 10px;
+  display: table; }
+  .dataGridHeaderRow .dataGridHeaderTitle {
+    /*padding:16px 0 0 20px;*/
+    font-family: "Planer", Tahoma, Geneva, sans-serif;
+    font-size: 18px; }
+  .dataGridHeaderRow .dghRow {
+    display: table-row; }
+  .dataGridHeaderRow .dghChild {
+    display: table-cell;
+    vertical-align: middle; }
+    .dataGridHeaderRow .dghChild > span {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      width: 50%;
+      /*padding:16px 23px 0 23px;*/ }
+      .dataGridHeaderRow .dghChild > span div, .dataGridHeaderRow .dghChild > span span, .dataGridHeaderRow .dghChild > span ol, .dataGridHeaderRow .dghChild > span ul, .dataGridHeaderRow .dghChild > span li {
+        margin-bottom: 0;
+        padding-bottom: 0; }
+      .dataGridHeaderRow .dghChild > span > span ~ span {
+        margin-left: 15px; }
+
+/*# sourceMappingURL=DataGridHeader.css.map */

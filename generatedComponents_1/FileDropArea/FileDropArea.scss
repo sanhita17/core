@@ -1,0 +1,39 @@
+@import "../_base";
+
+
+.filedropcol{
+    display:table;
+    height:100% !important;
+    min-height:100% !important;
+}
+
+.filedroptree{
+    display: table-row;
+    height:1%;
+}
+
+.filedroparea{
+    display:table-row;
+    height:auto;
+    width:100%;
+    background-color:white;
+}
+.filedropcontent{
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    .ilicon{
+        font-size:120pt;
+        margin-bottom:40px;
+        color:$brand-primary;
+    }
+}
+
+.filedroptab{
+    height:100% !important;
+    min-height:100% !important;
+    .container-fluid, .container, .row{
+        height:100% !important;
+        min-height:100% !important;    
+    }
+}

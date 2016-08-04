@@ -1,0 +1,28 @@
+@import "../base";
+@import "../variables";
+@import "../forms";
+
+.filter-box{
+    padding:20px 20px 0 20px;
+    margin-bottom:$row-margin;
+    border:1px solid $pipe-dark-divider;
+    background-color:#eee;    
+}
+.filter-box-radios{
+    border-bottom:1px solid $pipe-dark-divider;
+    padding-bottom:20px;
+    margin-bottom:20px;
+    color:#000;
+    label{
+        padding-left:20px;
+        color:$brown-primary;
+        display:inline;
+    }
+}
+.filter-box-dropdowns{
+    .row {
+        .col-md-4 > .form-group {margin-bottom:0px !important;}
+        .col-md-4 > .form-group > .input-label,.dropdown {font-size:14px;}
+        margin-bottom:$row-margin !important;
+    }
+}

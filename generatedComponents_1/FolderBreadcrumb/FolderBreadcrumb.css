@@ -1,0 +1,23 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.folderBreadcrumbRow {
+  margin: 0;
+  padding-top: 5px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #007681;
+  vertical-align: middle; }
+  .folderBreadcrumbRow .ilicon {
+    color: #fff;
+    font-size: 20px;
+    padding: 0;
+    margin: 0; }
+  .folderBreadcrumbRow span {
+    padding: 0px 10px 5px 10px;
+    background-color: #007681; }
+
+.folderBreadcrumbRow:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*# sourceMappingURL=FolderBreadcrumb.css.map */

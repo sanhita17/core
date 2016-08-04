@@ -1,0 +1,57 @@
+<div class="dynamic-filter-container">
+	<span class="dynamic-filter-addon">
+		<span class="ilicon ilicon-filter filtered-icon" data-toggle="tooltip" data-placement="top" data-original-title="Filters applied"></span>
+	</span>
+	<div class="dynamic-filter">
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<label for="thisFilter">Filter By:</label>
+				</span>
+				<input type="text" class="form-control" value="" maxlength="" id="thisFilter" data-name="dynamic-filter">
+				<span class="input-group-btn holds-dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-target="thisFilterMenu" aria-expanded="true">
+						<span class="ilicon ilicon-chevron-down"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+					</button>
+					<ul class="dropdown-menu" id="thisFilterMenu" role="menu" aria-labelledby="thisFilterMenu">
+						<li class="first-in-list-group last-in-list-group">
+							<input type="checkbox" id="filter-all">
+							<label for="filter-all" class="selected">All</label>
+						</li>
+						<li class="divider"></li>
+						<li role="presentation" class="dropdown-header first-in-list-group">ACCOUNT</li>
+						<li>
+							<input type="checkbox" id="filter-provisioned">
+							<label for="filter-provisioned" class="selected">Provisioned</label>
+						</li>
+						<li>
+							<input type="checkbox" id="filter-pending">
+							<label for="filter-pending" class="selected">Pending</label>
+						</li>
+						<li>
+							<input type="checkbox" id="filter-invited">
+							<label for="filter-invited" class="selected">Invited</label>
+						</li>
+						<li class="last-in-list-group">
+							<input type="checkbox" id="filter-unregistered">
+							<label for="filter-unregistered" class="selected">Unregistered</label>
+						</li>
+						<li class="divider"></li>
+						<!-- <li role="presentation" class="dropdown-header first-in-list-group">USER TYPE</li><li><input type="checkbox" id="filter-internal"><label for="filter-internal" class="selected">Internal</label></li><li class="last-in-list-group"><input type="checkbox" id="filter-external"><label for="filter-external" class="selected">External</label></li><li class="divider"></li> -->
+						<li role="presentation" class="dropdown-header first-in-list-group">LAST ACCESSED</li>
+						<li class="last-in-list-group">
+							<input type="checkbox" id="filter-never">
+							<label for="filter-never" class="selected">Never</label>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="#" class="close-filter-link first-in-list-group last-in-list-group">Close</a>
+						</li>
+					</ul>
+					<button class="btn btn-default filter-reset" type="button">RESET</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div> 
