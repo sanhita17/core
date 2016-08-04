@@ -1,0 +1,54 @@
+<table class="-tbl" cellpadding="0" cellspacing="0" border="0"
+       ng-show="timePeriodList && timePeriodSelected">
+   <tr>
+      <td>
+         <span class="-name"
+               ng-if="timePeriodSelected.value=='CUSTOM'"
+               ng-click="timePeriodNameClicked();"
+               ng-class="{'-breadcrumb':showTimePeriodAsBreadcrumb,'-link':showTimePeriodAsBreadcrumb}">({{timePeriodSelected.display}})</span>
+         <span class="-name"
+               ng-if="timePeriodSelected.value!='CUSTOM'"
+               ng-click="timePeriodNameClicked();"
+               ng-class="{'-breadcrumb':showTimePeriodAsBreadcrumb,'-link':showTimePeriodAsBreadcrumb}">({{timePeriodSelected.name}})</span>
+      </td>
+      <td class="-selector" ng-if="!hideTimePeriodDropDown" dropdown>
+         <button type="button"
+                 class="-icon -icon_btn_calendar" dropdown-toggle
+                 ng-disabled="timePeriodList.length==1 || !timePeriodSelectorEnabled"></button>
+         <ul class="-dropdown-menu dropdown-menu"
+             role="menu"
+             ng-show="timePeriodList">
+            <li ng-repeat="timePeriod in timePeriodList"
+                ng-if="(showCustomTimePeriodOption && timePeriodList[$index].value=='CUSTOM') || (timePeriodList[$index].value!='CUSTOM')"
+                ng-class="timePeriodList[$index].value==timePeriodSelected.value?'selected':''"
+                ng-click="changeSelectedTimePeriod(timePeriodList[$index].value)">
+               <div class="-record"
+                    timePeriod="{{timePeriodList[$index]}}">
+                  <span class="-text">{{timePeriod.name}}</span>
+               </div>
+            </li>
+         </ul>
+         <div class="-calendar-menu hide"
+              click-outside="clickOutside()"
+              ng-show="selectCustomTimePeriod"
+              ng-click="$event.preventDefault();$event.stopPropagation();">
+            <div class="-periodSelector">
+               <div class="-calendar">
+                  <div>From</div>
+                  <div id="fromDate"></div>
+               </div>
+               <div class="-calendar">
+                  <div>To</div>
+                  <div id="toDate"></div>
+               </div>
+            </div>
+            <div class="-buttonContainer">
+               <button class="-update_range"
+                       ng-class="{'-disabled':updateRangeDisabled}"
+                       ng-click="updateDateRangeSelection(true)"
+                       ng-disabled="updateRangeDisabled">Update Range</button>
+            </div>
+         </div>
+      </td>
+   </tr>
+</table>

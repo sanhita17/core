@@ -1,0 +1,110 @@
+.-tbl{
+   display: inline-block;
+   height: 25px;
+   line-height: 25px;
+   width: auto;
+   color: #333333;
+}
+.-tbl TD{
+   text-align: left;
+   padding: 0;
+   vertical-align: middle;
+}
+.-tbl TD.-selector{
+   position: relative;
+}
+.-tbl TD:first-of-type{
+   font-size: 15px;
+   font-weight: 700;
+   height: 25px;
+   line-height: 25px;
+}
+.-tbl TD:first-of-type SPAN{
+   margin-top: 1px;
+}
+.-tbl BUTTON{
+   display: block;
+}
+.-tbl .-link{
+   color: #5679e1;
+   cursor: pointer;
+}
+.-dropdown-menu{
+   position: absolute;
+   min-width: 160px;
+   margin-top: 0;
+   z-index: 10001;
+}
+.-dropdown-menu UL{
+   padding-bottom: 10px;
+}
+.-dropdown-menu LI{
+   display: block;
+   text-align: left;
+   font-size: 14px;
+   padding: 0 12px;
+   height: 30px;
+   line-height: 30px;
+}
+.-dropdown-menu .-text{
+   display: block;
+   vertical-align: top;
+   padding-left: 6px;
+}
+.-dropdown-menu .-text:hover{
+   cursor: pointer;
+}
+.-dropdown-menu LI.active{
+   background-color: #bdc5e5;
+}
+.-dropdown-menu LI.selected .-text{
+   font-weight: 700;
+}
+
+/* -----vvvvv--------------- calendar pickers */
+.-calendar-menu{
+   position: absolute;
+   left: 165px;
+   padding: 5px 5px;
+   width: 465px;
+   margin-top: -27px;
+   z-index: 10001;
+
+   top: 100%;
+   float: left;
+   min-width: 160px;
+   font-size: 14px;
+   text-align: left;
+   list-style: none;
+   background-color: #fff;
+   -webkit-background-clip: padding-box;
+   background-clip: padding-box;
+   border: 1px solid rgba(0, 0, 0, .15);
+   border-radius: 4px;
+   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+   box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.-periodSelector .-calendar{
+   display: inline-block;
+}
+.-periodSelector .-calendar > DIV{
+   font-weight: 700;
+   text-align: center;
+}
+.-update_range {
+   float: right;
+   min-width: 100px;
+   padding: 0 20px;
+   margin: 12px 5px;
+   height: 25px;
+   font-size: 12px;
+   line-height: 12px;
+   background: #5578e0;
+   color: #fff;
+   border-radius: 15px;
+   border: 1px solid transparent;
+   text-transform: uppercase;
+}
+.-update_range.-disabled {
+   opacity: 0.5;
+}

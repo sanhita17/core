@@ -1,0 +1,28 @@
+<table class="-tbl" cellpadding="0" cellspacing="0" border="0"
+       ng-show="districtList && districtSelected">
+   <tr>
+      <td class="-selector" ng-if="((showAllDistricts && districtListLength.withAll>1) || (!showAllDistricts && districtListLength.withoutAll>1)) && !hideDistrictDropDown" dropdown>
+         <button type="button"
+                 class="-icon -icon_btn_downArrow" dropdown-toggle
+                 ng-disabled="!districtSelectorEnabled"></button>
+         <ul class="-dropdown-menu dropdown-menu"
+             role="menu"
+             ng-show="districtList">
+            <li ng-repeat="data in districtList"
+                ng-if="(showAllDistricts && districtList[$index].uuid=='allDistricts') || (districtList[$index].uuid!='allDistricts')"
+                ng-class="districtList[$index].uuid==districtSelected.uuid?'selected':''"
+                ng-click="changeSelectedDistrict(districtList[$index].uuid)">
+               <div class="-record"
+                    uuid="{{districtList[$index].uuid}}">
+                  <span class="-text">{{data.name}}</span>
+               </div>
+            </li>
+         </ul>
+      </td>
+      <td>
+         <span class="-name"
+               ng-click="districtNameClicked()"
+               ng-class="{'-breadcrumb':showDistrictAsBreadcrumb,'-link':showDistrictAsBreadcrumb}">{{districtSelected.name}}</span>
+      </td>
+   </tr>
+</table>

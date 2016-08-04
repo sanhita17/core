@@ -1,0 +1,28 @@
+<table class="-tbl" cellpadding="0" cellspacing="0" border="0"
+       ng-show="strandList && strandSelected">
+   <tr>
+      <td class="-selector" ng-if="((showAllStrands && strandListLength.withAll>1) || (!showAllStrands && strandListLength.withoutAll>1)) && !hideStrandDropDown" dropdown>
+         <button type="button"
+                 class="-icon -icon_btn_downArrow" dropdown-toggle
+                 ng-disabled="!strandSelectorEnabled"></button>
+         <ul class="-dropdown-menu dropdown-menu"
+             role="menu"
+             ng-show="strandList">
+            <li ng-repeat="strand in strandList"
+                ng-if="(showAllStrands && strandList[$index].name=='All Strands') || (strandList[$index].name!='All Strands')"
+                ng-class="strandList[$index]==strandSelected?'selected':''"
+                ng-click="changeSelectedStrand(strandList[$index].name)">
+               <div class="-record"
+                    strand="{{strandList[$index]}}">
+                  <span class="-text">{{strand.name}}</span>
+               </div>
+            </li>
+         </ul>
+      </td>
+      <td>
+         <span class="-name"
+               ng-click="strandNameClicked()"
+               ng-class="{'-breadcrumb':showStrandAsBreadcrumb,'-link':showStrandAsBreadcrumb}">{{strandSelected.name}}</span>
+      </td>
+   </tr>
+</table>

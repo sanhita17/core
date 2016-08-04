@@ -1,0 +1,27 @@
+<table class="-tbl" cellpadding="0" cellspacing="0" border="0"
+       ng-show="reportTypeList && reportTypeSelected">
+   <tr>
+      <td class="-selector" ng-if="reportTypeList.length>1 && !hideReportTypeDropDown" dropdown>
+         <button type="button"
+                 class="-icon -icon_btn_downArrow" dropdown-toggle
+                 ng-disabled="!reportTypeSelectorEnabled"></button>
+         <ul class="-dropdown-menu dropdown-menu"
+             role="menu"
+             ng-show="reportTypeList">
+            <li ng-repeat="reportType in reportTypeList"
+                ng-class="reportTypeList[$index]==reportTypeSelected?'selected':''"
+                ng-click="changeSelectedReportType(reportTypeList[$index].name)">
+               <div class="-record"
+                    reportType="{{reportTypeList[$index]}}">
+                  <span class="-text">{{reportType.name}}</span>
+               </div>
+            </li>
+         </ul>
+      </td>
+      <td>
+         <span class="-name"
+               ng-click="reportTypeNameClicked()"
+               ng-class="{'-breadcrumb':showReportTypeAsBreadcrumb,'-link':showReportTypeAsBreadcrumb}">{{reportTypeSelected.name}}</span>
+      </td>
+   </tr>
+</table>

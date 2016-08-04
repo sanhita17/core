@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html class="no-js">
+<head>
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>&lt; ui | selectors | districtSelector &gt;</title>
+
+   <script>
+      window.globals={
+         session:{"user":{"userLogin":"testuser","firstName":"Test","lastName":"User"}},
+         appUuid: "EC6A1DF0-C0E2-4D28-BC25-C36E442F5162",
+         userUuid:"82440D39-F787-46D5-95C5-2665C83852F9",
+         clientUuid: "A37AB8C8-2213-4AF8-BD62-5E00C02D89E4",
+         coreSisUrl: "http://dev.core.voyagersopris.com/sis/ws/",
+         appServer: window.location.protocol+"//"+window.location.host+"/",
+         coreServer: window.location.protocol+"//"+window.location.host.replace("velocity","core").replace("54600","53600")+"/"
+      };
+      document.write("<"+"script src=\""+window.globals.appServer+"client/vsl/velocity/ui/selectors/districtSelector/dependencies.js\"><"+"/script>");
+   </script>
+
+   <style>
+      BODY{
+         margin:0;
+      }
+      DIV.priNavbar{
+         background: #4c68b1;
+         height: 40px;
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         z-index: 10;
+      }
+      DIV.subNavbar{
+         background: #cfd6e8;
+         height: 40px;
+         position: fixed;
+         top:40px;
+         left:0;
+         right:0;
+         z-index:5;
+      }
+      DIV.subNavbar .container{
+         position: relative;
+         margin: 0 10px 0 30px;
+         width: calc(100% - 40px);
+      }
+
+      TABLE.legend{
+         top: 120px;
+      }
+      TABLE.legend{
+         position: absolute;
+         width: calc(100% - 60px);
+         margin: 0 30px;
+      }
+      TABLE.legend TR.unsupported{
+         background-color: rgba(204,0,0,.1);
+         color: rgba(0,0,0,.2);
+      }
+      TABLE.legend TR.unsupported TD:last-child{
+         position: relative;
+      }
+      TABLE.legend TR.unsupported TD:last-child:after{
+         position: absolute;
+         right: 20px;
+         content: 'CURRENTLY NOT SUPPORTED';
+         color: #aa0000;
+         opacity: 1;
+      }
+      TABLE.legend TR TH{
+         border-bottom: 1px solid #000000;
+      }
+      TABLE.legend TR TD:first-of-type{
+         font-weight: 700;
+      }
+      TABLE.legend TR TD.separator{
+         height: 1px;
+         border-bottom: 1px solid #000000;
+      }
+      TABLE.legend TR TD .default{
+         color: #00aa00;
+      }
+   </style>
+</head>
+<body ng-app="app" ng-controller="AppController">
+
+<test-login class="-fady" style="position:absolute;left:30px;top:6px;z-index:100"></test-login>
+
+<div class="priNavbar"></div>
+<div class="subNavbar">
+   <div class="container">
+      <district-selector></district-selector>
+   </div>
+</div>
+
+<table class="legend" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+      <th>Directive:</th>
+      <th>Values:</th>
+      <th>Usage: Include if wanting to...</th>
+   </tr>
+   <tr class="unsupported">
+      <td>show-all-districts</td>
+      <td><span class="default">true</span> / false</td>
+      <td>... show a selectable item for "All Districts"</td>
+   </tr>
+   <tr>
+      <td>show-district-as-breadcrumb</td>
+      <td><span class="default">true</span> / false</td>
+      <td>... make the selector a breadcrumb to return to a previous or different view (or not)</td>
+   </tr>
+   <tr>
+      <td>hide-district-drop-down</td>
+      <td><span class="default">true</span> / false</td>
+      <td>... make the selector button unavailable</td>
+   </tr>
+   <tr><td colspan="3" class="separator"></td></tr>
+   <tr>
+      <td colspan="3">If directives are present, but unset (not true or false) the default value shown in <span class="default">GREEN</span> will be used.</td>
+   </tr>
+</table>
+
+</body>
+</html>

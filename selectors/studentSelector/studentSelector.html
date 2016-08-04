@@ -1,0 +1,32 @@
+<table class="-tbl" cellpadding="0" cellspacing="0" border="0"
+       ng-show="studentList && studentSelected">
+   <tr>
+      <td class="-selector" ng-if="((showAllStudents && studentListLength.withAll>1) || (!showAllStudents && studentListLength.withoutAll>1)) && !hideStudentDropDown" dropdown>
+         <button type="button"
+                 class="-icon -icon_btn_downArrow" dropdown-toggle
+                 ng-disabled="!studentSelectorEnabled"></button>
+         <ul class="-dropdown-menu dropdown-menu"
+             role="menu"
+             ng-show="studentList">
+            <li ng-repeat="data in studentList"
+                ng-if="(showAllStudents && studentList[$index].uuid=='allStudents') || (strandList[$index].uuid!='allStudents')"
+                ng-class="studentList[$index].uuid==studentSelected.uuid?'selected':''"
+                ng-click="changeSelectedStudent(studentList[$index].uuid)">
+               <div class="-record"
+                    uuid="{{studentList[$index].uuid}}">
+                  <span class="-text">{{data.firstName}} {{data.lastName}}</span>
+               </div>
+            </li>
+         </ul>
+      </td>
+      <td>
+         <span class="-student">
+            <span class="-name"
+                  ng-click="studentNameClicked()"
+                  ng-class="{'-breadcrumb':showStudentAsBreadcrumb,'-link':showStudentAsBreadcrumb}">{{studentSelected.firstName}} {{studentSelected.lastName}}</span>
+            <span class="-grade"
+                  ng-if="studentSelected.gradeLevel">{{studentSelected.gradeLevel}}</span>
+         </span>
+      </td>
+   </tr>
+</table>

@@ -1,0 +1,28 @@
+<table class="-tbl" cellpadding="0" cellspacing="0" border="0"
+       ng-show="schoolClassList && schoolClassSelected">
+   <tr>
+      <td class="-selector" ng-if="((showAllClasses && schoolClassListLength.withAll>1) || (!showAllClasses && schoolClassListLength.withoutAll>1)) && !hideClassDropDown" dropdown>
+         <button type="button"
+                 class="-icon -icon_btn_downArrow" dropdown-toggle
+                 ng-disabled="!schoolClassSelectorEnabled"></button>
+         <ul class="-dropdown-menu dropdown-menu"
+             role="menu"
+             ng-show="schoolClassList">
+            <li ng-repeat="data in schoolClassList"
+                ng-if="(showAllClasses && schoolClassList[$index].uuid=='allClasses') || (schoolClassList[$index].uuid!='allClasses')"
+                ng-class="schoolClassList[$index].uuid==schoolClassSelected.uuid?'selected':''"
+                ng-click="changeSelectedSchoolClass(schoolClassList[$index].uuid)">
+               <div class="-record"
+                    uuid="{{schoolClassList[$index].uuid}}">
+                  <span class="-text">{{data.name}}</span>
+               </div>
+            </li>
+         </ul>
+      </td>
+      <td>
+         <span class="-name"
+               ng-click="classNameClicked()"
+               ng-class="{'-breadcrumb':showClassAsBreadcrumb,'-link':showClassAsBreadcrumb}">{{schoolClassSelected.name}}</span>
+      </td>
+   </tr>
+</table>
