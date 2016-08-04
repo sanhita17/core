@@ -1,0 +1,511 @@
+. {
+   width: 1000px;
+}
+
+.-replaceBox {}
+
+.-answerHolder {
+   /* min-width:150px;*/
+   white-space: nowrap;
+   margin-bottom: 5px;
+}
+
+.-answerHolder.-inline {
+   border-width: 0px;
+   background-color: transparent;
+   padding: 0px !important;
+   width: auto !important;
+   transition: background-color 3s, border-width 3s, padding-right 3s, width 3s;
+   -webkit-transition: background-color 3s, border-width 3s, padding-right 3s, width 3s;
+}
+
+.-inline .vsl_core_ui_standardButton-contents {
+   padding-left: 0;
+   padding-right: 0;
+   transition: padding-left 3s, padding-right 3s;
+}
+
+.-sentence {
+   display: inline-block;
+}
+
+.-word {
+   margin-top: -1330px;
+}
+
+.-tableposition {
+   padding-top: 110px;
+   padding-left: 65px;
+}
+
+.-zoomInAnswer {
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation-name: zoomIn;
+   animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomIn {
+   from {
+      opacity: 0;
+      -webkit-transform: scale3d(.3, .3, .3);
+      transform: scale3d(.3, .3, .3);
+   }
+   50% {
+      opacity: 1;
+   }
+}
+
+@keyframes zoomIn {
+   from {
+      opacity: 0;
+      -webkit-transform: scale3d(.3, .3, .3);
+      transform: scale3d(.3, .3, .3);
+   }
+   50% {
+      opacity: 1;
+   }
+}
+
+.-placeholder {
+   background-color: <%=globals.droppable.backgroundColor%>;
+   border: 1px solid <%=globals.droppable.borderColor%> !important;
+   margin-bottom: <%=globals.padding.p4%>;
+   border-radius: 6px;
+   cursor: default !important;
+   width: 208px;
+}
+
+.-sentence-container {
+   position: relative;
+   margin-left: -25px;
+}
+
+.-sentence-container:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0
+}
+
+.-sentence-container .-sentenceAudioContainer {
+   float: left;
+   display: block;
+   width: 40px;
+   height: 44px;
+   position: relative;
+}
+
+.-sentence-container .-sentenceAudioContainer .-sentenceAudio {
+   width: 26px;
+   height: 26px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-top: -13px;
+   margin-left: -13px;
+}
+
+.-sentence-container .-sentenceAudioContainer .-sentenceAudio > div {
+   margin: 0;
+}
+
+.-sentence-container .-sentence {
+   display: block;
+   float: left;
+   width: calc(100% - 80px);
+}
+
+
+/*.-sentence-container .-answerHolder {
+  margin-bottom: 0;
+}*/
+
+.-sentence-container span.word {
+   display: inline;
+   height: 44px;
+   line-height: 44px;
+}
+
+
+/************* Unskinned ************/
+
+.-unskinned .-sentence-container {
+   position: absolute;
+   top: 200px;
+   left: 50px;
+   width: 1000px;
+   height: 200px;
+}
+
+.-unskinned .-option {
+   position: absolute;
+   display: inline-block;
+   border-width: <%=globals.box.borderWidth%>;
+   border-style: <%=globals.box.borderStyle%>;
+   border-color: <%=globals.box.borderColor%>;
+   border-radius: <%=globals.box.borderRadius%>;
+   width: 192px;
+   height: 52px;
+   top: 360px;
+   white-space: normal;
+   text-align: left;
+   transition: top 0.25s, height 0.25s;
+}
+
+.-unskinned .-option.-interactive {
+   background-color: <%=globals.interactive.backgroundColor%>;
+}
+
+.-unskinned .-option.-interactive:not(.-disabled):hover {
+   top: 350px;
+   height: 62px;
+}
+
+.-unskinned .-option.-ghost {
+   border-style: dashed;
+   opacity: 0.35;
+   border-color: #000000;
+}
+
+.-unskinned .-option.-disabled {
+   background: none;
+}
+
+.-unskinned .-option-0 {
+   left: 79px;
+}
+
+.-unskinned .-option-1 {
+   left: 311px;
+}
+
+.-unskinned .-option-2 {
+   left: 543px;
+}
+
+.-unskinned .-option-3 {
+   left: 775px;
+}
+
+.-unskinned .-positioner {
+   position: absolute;
+   display: inline-block;
+   top: 0px;
+   height: 52px;
+   left: 0px;
+   right: 0px;
+}
+
+.-unskinned .-positioner .-option-audio {
+   display: block;
+   position: absolute;
+   bottom: -43px;
+   left: 80px;
+}
+
+
+/************* Snow ************/
+
+
+/*
+.-skin-Snow .-sentence-container {
+   position: absolute;
+   top: 200px;
+   left: 50px;
+   width: 1000px;
+   height: 200px;
+}*/
+
+.-skin-Snow .-sentence-container {
+   position: relative;
+   top: -270px;
+   left: 0;
+}
+
+.-skin-Snow .-option {
+   position: absolute;
+   display: inline-block;
+   background: url('Skins/Snow/btn_snowBlock_initial.svg');
+   width: 192px;
+   height: 72px;
+   top: 360px;
+   white-space: normal;
+   text-align: left;
+   transition: top 0.25s;
+}
+
+.-skin-Snow .-option:after {
+   content: '';
+   display: block;
+   position: absolute;
+   background: url('Skins/Snow/btn_snowpile.svg');
+   width: 235px;
+   height: 35px;
+   top: 58px;
+   left: -21px;
+   transition: top 0.25s;
+}
+
+.-skin-Snow .-option.-interactive:not(.-disabled):hover {
+   top: 350px;
+}
+
+.-skin-Snow .-option.-interactive:not(.-disabled):hover:after {
+   top: 68px;
+}
+
+.-skin-Snow .-option.-ghost {
+   background: url('Skins/Snow/btn_snowBlock_selected.svg');
+}
+
+.-skin-Snow .-option.-disabled {
+   opacity: 0.5;
+}
+
+.-skin-Snow .-option-0 {
+   left: 79px;
+}
+
+.-skin-Snow .-option-1 {
+   left: 311px;
+}
+
+.-skin-Snow .-option-2 {
+   left: 543px;
+}
+
+.-skin-Snow .-option-3 {
+   left: 775px;
+}
+
+.-skin-Snow .-positioner {
+   position: absolute;
+   display: inline-block;
+   top: 4px;
+   bottom: 10px;
+   left: 0px;
+   right: 11px;
+}
+
+.-skin-Snow .-positioner .-option-audio {
+   display: block;
+   position: absolute;
+   bottom: -73px;
+   left: 80px;
+}
+
+
+/************* Planet ************/
+
+
+/*.-skin-Planet .-sentence-container {
+   position: absolute;
+   display: inline-block;
+   top: 200px;
+   left: 50px;
+   width: 1000px;
+   height: 200px;
+}*/
+
+.-skin-Planet .-sentence-container {
+   position: relative;
+   top: -270px;
+   left: 0;
+}
+
+.-skin-Planet .-option {
+   position: absolute;
+   background: url('Skins/Planet/btn_pit_initial.svg');
+   width: 208px;
+   height: 94px;
+   top: 360px;
+   white-space: normal;
+   text-align: left;
+}
+
+.-skin-Planet .-option.-ghost {
+   background: url('Skins/Planet/btn_pit_selected.svg');
+}
+
+.-skin-Planet .-option.-disabled {
+   opacity: 0.5;
+}
+
+.-skin-Planet .-option-0 {
+   left: 79px;
+}
+
+.-skin-Planet .-option-1 {
+   left: 307px;
+}
+
+.-skin-Planet .-option-2 {
+   left: 535px;
+}
+
+.-skin-Planet .-option-3 {
+   left: 763px;
+}
+
+.-skin-Planet .-positioner {
+   position: absolute;
+   display: inline-block;
+   top: 40px;
+   bottom: 10px;
+   left: 10px;
+   right: 10px;
+}
+
+.-skin-Planet .-positioner .-option-audio {
+   display: block;
+   position: absolute;
+   bottom: -50px;
+   left: 80px;
+}
+
+
+/***Under Water***/
+
+
+/*.-skin-UnderWater .-sentence-container {
+   position: absolute;
+   display: inline-block;
+   top: 120px;
+   left: 50px;
+   width: 1000px;
+   height: 200px;
+}*/
+
+.-skin-UnderWater .-sentence-container {
+   position: relative;
+   top: -310px;
+   left: 0;
+}
+
+.-skin-UnderWater .-option {
+   position: absolute;
+   background: url('Skins/Underwater/btn_shell_initial.svg');
+   width: 218px;
+   height: 154px;
+   top: 330px;
+   white-space: normal;
+   text-align: left;
+   background-repeat: no-repeat;
+}
+
+.-skin-UnderWater .-option.-ghost {
+   background: url('Skins/Underwater/btn_shell_selected.svg');
+   background-repeat: no-repeat;
+}
+
+.-skin-UnderWater .-option.-disabled {
+   opacity: 0.5;
+}
+
+.-skin-UnderWater .-option-0 {
+   left: 79px;
+}
+
+.-skin-UnderWater .-option-1 {
+   left: 307px;
+}
+
+.-skin-UnderWater .-option-2 {
+   left: 535px;
+}
+
+.-skin-UnderWater .-option-3 {
+   left: 763px;
+}
+
+.-skin-UnderWater .-positioner {
+   position: absolute;
+   display: inline-block;
+   top: -47px;
+   bottom: 10px;
+   left: 0px;
+   right: 50px;
+}
+
+.-skin-UnderWater .-positioner .-option-audio {
+   display: block;
+   position: absolute;
+   bottom: -45px;
+   left: 60px;
+}
+
+
+/***Under Water 2***/
+
+
+/*.-skin-UnderWater-2 .-sentence-container {
+   position: absolute;
+   display: inline-block;
+   top: 150px;
+   left: 50px;
+   width: 1000px;
+   height: 200px;
+}*/
+
+.-skin-UnderWater-2 .-sentence-container {
+   position: relative;
+   top: -270px;
+   left: 0;
+}
+
+.-skin-UnderWater-2 .-option {
+   position: absolute;
+   background: url('Skins/Underwater2/btn_treasure_initial.svg');
+   width: 190px;
+   height: 154px;
+   top: 370px;
+   white-space: normal;
+   text-align: left;
+   background-repeat: no-repeat;
+}
+
+.-skin-UnderWater-2 .-option.-ghost {
+   background: url('Skins/Underwater2/btn_treasure_selected.svg');
+   background-repeat: no-repeat;
+}
+
+.-skin-UnderWater-2 .-option.-disabled {
+   opacity: 0.5;
+}
+
+.-skin-UnderWater-2 .-option-0 {
+   left: 79px;
+}
+
+.-skin-UnderWater-2 .-option-1 {
+   left: 280px;
+}
+
+.-skin-UnderWater-2 .-option-2 {
+   left: 485px;
+}
+
+.-skin-UnderWater-2 .-option-3 {
+   left: 683px;
+}
+
+.-skin-UnderWater-2 .-positioner {
+   position: absolute;
+   display: inline-block;
+   top: -39px;
+   bottom: 50px;
+   left: 20px;
+   right: 3px;
+}
+
+.-skin-UnderWater-2 .-positioner .-option-audio {
+   display: block;
+   position: absolute;
+   bottom: 10px;
+   left: 60px;
+}

@@ -1,0 +1,24 @@
+<table class="vsl_core-tableLayout -tableposition">
+   <tr>
+      <td style="width:100%;height:100%;vertical-align:bottom">
+         <div class="-sentence-container">
+            <div class="-sentenceAudioContainer">
+               <icon-button ng-if="sentenceAudio.uri" class="-passageAudio --audio -sentenceAudio" audio-player="sentenceAudio.uri" play-on="playSentence" radial-progress-bar></icon-button>
+            </div>
+            <div class="vslapp_passage vslapp_sentence -sentence"></div>
+            <script type="text/ng-template" name="replaceBoxTemplate">
+               <standard-button class="vslapp_standardButton vslapp_passage vslapp_sentence -answerHolder answerButton" ng-class="{'-zoomInAnswer':zoomInAnswer,'-inline':combineSentence,'--interactive':ctx.answerList[ctx.selectedIndex].text,'-placeholder':!ctx.answerList[ctx.selectedIndex].text}" value="ctx.answerList[ctx.selectedIndex].text"></standard-button>
+            </script>
+         </div>
+         <div audio="item.audio" class="vslapp_standardButton vslapp_sentence -option -option-{{$index}}" ng-class="{'-disabled':rightAnswerPicked,'-interactive':!item.used&&ctx.selectedIndex!=$index,'-ghost':item.used||ctx.selectedIndex==$index,}" ng-repeat="item in ctx.answerList" ng-click="clickedStandardButton($index)">
+            <span class="-positioner"><span class="-text" centered="50% 50%">{{item.used||ctx.selectedIndex==$index?'':item.text}}</span>
+            <icon-button ng-if="item.audio&& (!item.used && ctx.selectedIndex!=$index)" class="--audio -option-audio" audio-player="item.audio"></icon-button>
+            </span>
+         </div>
+      </td>
+      <td style="vertical-align:bottom;text-align:right">
+         <next-button class="--version2" ng-if="ctx.state!=='NOT SELECTED'" ng-show="ctx.state==='SUBMITTING'||ctx.state==='DONE'||ctx.state==='SELECTED'||(ctx.state==='SUBMITTED'&amp;&amp;!_processingFeedback)" ng-disabled="ctx.state==='SUBMITTING'||ctx.state==='DONE'" ng-click="next()">
+         </next-button>
+      </td>
+   </tr>
+</table>

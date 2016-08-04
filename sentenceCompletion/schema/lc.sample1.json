@@ -1,0 +1,13 @@
+{
+   "@manifest" : {
+      "urn" : "vsl:core:lc:spec:sentenceCompletion"
+   },
+   "prompt" : {
+      "text" : "Read the passage.",
+      "audio" : {
+         "src" : {
+            "url" : "http://playground.delachi.com/devassets/audio/mp3/P1S1Intro.mp3"
+         }
+      }
+   }
+}

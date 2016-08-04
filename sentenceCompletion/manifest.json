@@ -1,0 +1,51 @@
+{
+   "@urn" : "vsl:core:lc:spec:sentenceCompletion",
+   "author" : "Nesin,Tanneeru",
+   "name" : "sentence completion",
+   "description" : "sentence completion",
+   "schemas" : {
+      "lc" : {
+         "src" : {
+            "url" : "schema/lc.json"
+         }
+      }
+   },
+   "events" : {
+      "src" : {
+         "url" : "events.js"
+      },
+      "methods" : [
+         "init",
+         "submit",
+         "done"
+      ]
+   },
+   "templates" : {
+      "basic" : {
+         "tempType" : "LCPLAYER",
+         "resources" : [
+            {
+               "url" : "../../../ui/radialProgressBar/radialProgressBar.js"
+            },
+            {
+               "url" : "../../../ui/audioPlayer/audioPlayer.js"
+            },
+            {
+               "url" : "../../../ui/iconButton/iconButton.js"
+            },
+            {
+               "url" : "../../../ui/nextButton/nextButton.js"
+            },
+            {
+               "url" : "../../../ui/standardButton/standardButton.js"
+            },
+            {
+               "url" : "../../../ui/centered/centered.js"
+            },
+            {
+               "url" : "sentenceCompletion.js"
+            }
+         ]
+      }
+   }
+}

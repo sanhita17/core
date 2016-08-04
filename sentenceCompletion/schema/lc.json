@@ -1,0 +1,418 @@
+{
+   "$schema" : "http://json-schema.org/draft-04/schema#",
+   "title" : "sentence completion",
+   "description" : "Description for sentence completion",
+   "type" : "object",
+   "properties" : {
+      "@manifest" : {
+         "$ref" : "$common#/@manifest",
+         "default" : {
+            "urn" : "vsl:core:lc:spec:sentenceCompletion"
+         },
+         "options" : {
+            "hidden" : "true"
+         }
+      },
+      "instructions" : {
+         "$ref" : "$common#/instructions"
+      },
+      "hints" : {
+         "$ref" : "$common#/hints"
+      },
+      "videos" : {
+         "$ref" : "$common#/videos"
+      },
+      "prompt" : {
+         "$ref" : "$common#/prompt"
+      },
+      "dimensions" : {
+         "type" : "array",
+         "items" : {
+            "title" : "Dimension",
+            "allOf" : [
+               {
+                  "$ref" : "$common#/dimensionFormat"
+               },
+               {
+                  "oneOf" : [
+                     {
+                        "$ref" : "$dimensions#/audioAvailable"
+                     },
+                     {
+                        "$ref" : "$dimensions#/audioAvailableWithPrompt"
+                     },
+                     {
+                        "$ref" : "$dimensions#/audioHint"
+                     },
+                     {
+                        "$ref" : "$dimensions#/correctiveFeedback"
+                     }
+                  ]
+               }
+            ]
+         },
+         "allOf" : [
+            {
+               "$ref" : "$common#/dimensionsFormat"
+            }
+         ]
+      },
+      "tagMappings" : {
+         "title" : "Tag Mappings",
+         "type" : "object",
+         "properties" : {
+            "sentence" : {
+               "title" : "Sentence",
+               "$ref" : "$common#/tagMapping_full"
+            },
+            "correct" : {
+               "title" : "Correct Options",
+               "$ref" : "$common#/tagMapping_full"
+            },
+            "distractors" : {
+               "title" : "Distractors",
+               "$ref" : "$common#/tagMapping_full"
+            }
+         }
+      },
+      "adaptives" : {
+         "type" : "array",
+         "$ref" : "$common#/adaptivesFormat",
+         "items" : {
+            "oneOf" : [
+               {
+                  "title" : "Audio Hint",
+                  "type" : "object",
+                  "$ref" : "$common#/adaptiveFormat",
+                  "properties" : {
+                     "dimensions" : {
+                        "type" : "object",
+                        "$ref" : "$common#/adaptiveDimensionsFormat",
+                        "properties" : {
+                           "audioHint" : {
+                              "title" : "Audio Hint Level",
+                              "$ref" : "$dimensions#/audioHint_range"
+                           }
+                        }
+                     },
+                     "audio" : {
+                        "$ref" : "$common#/audio"
+                     }
+                  }
+               }
+            ]
+         }
+      },
+      "options" : {
+         "title" : "Options",
+         "type" : "object",
+         "properties" : {
+            "randomizeSelection" : {
+               "title" : "Randomize Selection",
+               "type" : "boolean",
+               "default" : true
+            },
+            "allowMultiSelect" : {
+               "title" : "Allow Multiple Selection",
+               "type" : "boolean",
+               "default" : false
+            }
+         }
+      },
+      "feedback" : {
+         "title" : "Feedback",
+         "type" : "object",
+         "properties" : {
+            "correct" : {
+               "title" : "Student picked correct answer.",
+               "$ref" : "$common#/feedback",
+               "default" : [
+                  {
+                     "guideAnimationName" : "RANDOM_CORRECT",
+                     "guideAnimationCycles" : 1,
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "global" : "globalAssets.audio.rightDing",
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "action" : "combineSentence",
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "pause" : 3,
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "action" : "done",
+                     "dimensions" : [
+                     ]
+                  }
+               ]
+            },
+            "incorrectAnswer" : {
+               "title" : "Student has answered incorrectly.",
+               "$ref" : "$common#/feedback",
+               "default" : [
+                  {
+                     "global" : "globalAssets.audio.wrongDing",
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "action" : "removeOption",
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 2
+                        },
+                        {
+                           "correctiveFeedback" : 1
+                        }
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "level2Feedback",
+                        "minCount" : 0,
+                        "maxCount" : 99
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 2
+                        }
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "level1Feedback",
+                        "minCount" : 0,
+                        "maxCount" : 99
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 1
+                        }
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "targetWord",
+                        "minCount" : 0,
+                        "maxCount" : 99
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 2
+                        },
+                        {
+                           "correctiveFeedback" : 1
+                        }
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "otherPhoneme",
+                        "minCount" : 0,
+                        "maxCount" : 99
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 1
+                        }
+                     ]
+                  }
+               ]
+            },
+            "noAnswer" : {
+               "title" : "Student did not select an answer.",
+               "$ref" : "$common#/feedback",
+               "default" : [
+                  {
+                     "global" : "globalAssets.audio.wrongDing",
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "action" : "removeOneRandomIncorrect",
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 2
+                        },
+                        {
+                           "correctiveFeedback" : 1
+                        }
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "level2Feedback",
+                        "minCount" : 0,
+                        "maxCount" : 99
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 2
+                        }
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "level1Feedback",
+                        "minCount" : 0,
+                        "maxCount" : 99
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 1
+                        }
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "targetWord",
+                        "minCount" : 0,
+                        "maxCount" : 99
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 2
+                        },
+                        {
+                           "correctiveFeedback" : 1
+                        }
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "otherPhoneme",
+                        "minCount" : 0,
+                        "maxCount" : 99
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                        {
+                           "correctiveFeedback" : 1
+                        }
+                     ]
+                  }
+               ]
+            },
+            "answerGiven" : {
+               "title" : "Student is given the anwser.",
+               "$ref" : "$common#/feedback",
+               "default" : [
+                  {
+                     "action" : "removeAllIncorrect",
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "action" : "selectCorrect",
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "pause" : 1,
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "action" : "submit",
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "action" : "combineSentence",
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "passageAudio" : {
+                        "tagNameId" : "feedback1",
+                        "minCount" : 1,
+                        "maxCount" : 999
+                     },
+                     "animateGuide" : false,
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "pause" : 2,
+                     "dimensions" : [
+                     ]
+                  },
+                  {
+                     "action" : "done",
+                     "dimensions" : [
+                     ]
+                  }
+               ]
+            }
+         }
+      }
+   },
+   "definitions" : {
+      "feedbackActions" : {
+         "type" : "string",
+         "enum" : [
+            "combineSentence",
+            "submit",
+            "done",
+            "unselectOption",
+            "removeOption",
+            "removeOneRandomIncorrect",
+            "removeAllIncorrect",
+            "selectCorrect"
+         ],
+         "options" : {
+            "enum_titles" : [
+               "Combine Sentence",
+               "Submit",
+               "Done",
+               "Unselect Option",
+               "Remove Selected Option",
+               "Remove One Random Incorrect Option",
+               "Remove All Incorrect Options",
+               "Select Correct"
+            ]
+         },
+         "default" : "unselectIncorrect"
+      },
+      "feedbackDimension" : {
+         "oneOf" : [
+            {
+               "title" : "Audio Available",
+               "$ref" : "$dimensions#/audioAvailable_value"
+            },
+            {
+               "title" : "Audio Available With Prompt",
+               "$ref" : "$dimensions#/audioAvailableWithPrompt_value"
+            },
+            {
+               "title" : "Audio Hint",
+               "$ref" : "$dimensions#/audioHint_value"
+            },
+            {
+               "title" : "Corrective Feedback",
+               "$ref" : "$dimensions#/correctiveFeedback_value"
+            }
+         ]
+      }
+   },
+   "@preprocessor" : {
+      "src" : "preprocessor.js",
+      "api" : "../../schema/preprocessorApi.js"
+   }
+}
