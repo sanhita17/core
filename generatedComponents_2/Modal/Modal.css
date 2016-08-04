@@ -1,0 +1,224 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.modal-open {
+  overflow-y: hidden !important; }
+
+.modal {
+  /*z-index:2;*/
+  overflow-y: hidden !important;
+  min-height: 400px !important; }
+
+.modal.fade:not(.in).fromleft .modal-dialog {
+  -webkit-transform: translate3d(-25%, 0, 0);
+  transform: translate3d(-25%, 0, 0); }
+
+.modal.fade:not(.in).fromright .modal-dialog {
+  -webkit-transform: translate3d(25%, 0, 0);
+  transform: translate3d(25%, 0, 0); }
+
+.modal-backdrop {
+  position: absolute;
+  left: 64px;
+  top: 0; }
+
+.modal-fullscreen {
+  /*    height:100% !important;
+      min-height:100% !important;*/
+  position: absolute;
+  left: 64px;
+  /*    top:45px;*/
+  z-index: 13;
+  min-width: 960px; }
+  .modal-fullscreen .modal-dialog {
+    z-index: 10 !important;
+    width: 100%;
+    /*        .modal-content{
+                .modal-body{
+                    padding:0 $body-padding 0 $body-padding;
+                }
+            }*/ }
+
+.modal-halfscreen {
+  height: 100% !important;
+  min-height: 100% !important; }
+  .modal-halfscreen .modal-dialog {
+    z-index: 12 !important;
+    width: 50%; }
+
+.modal-thirdscreen {
+  height: 100% !important;
+  min-height: 100% !important; }
+  .modal-thirdscreen .modal-dialog {
+    z-index: 12 !important;
+    width: 33%; }
+
+.modal-quarterscreen {
+  height: 100% !important;
+  min-height: 100% !important; }
+  .modal-quarterscreen .modal-dialog {
+    z-index: 12 !important;
+    width: 25%; }
+
+.modal-dialog {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100% !important;
+  padding: 0;
+  margin: 0;
+  min-height: 100% !important; }
+
+.modal-header {
+  border: 0;
+  font-family: 'PlanerMed', Tahoma, Geneva, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #6e6259;
+  padding: 20px 15px 15px 15px;
+  background-color: #6e6259; }
+  .modal-header .modal-title {
+    color: #FFF;
+    font-size: 24px !important; }
+  .modal-header .close {
+    font-size: 20px !important;
+    opacity: 1;
+    color: #fff;
+    text-shadow: none; }
+    .modal-header .close:hover {
+      color: #ccc; }
+    .modal-header .close:focus {
+      outline: 0; }
+  .modal-header h2 {
+    margin-bottom: 20px; }
+    .modal-header h2 .ilicon {
+      line-height: 22px;
+      font-size: 22px; }
+    .modal-header h2 a:last-child {
+      margin-left: 20px; }
+    .modal-header h2 a:only-child {
+      margin-left: 0; }
+
+.modal-header-wizard, .modal-header-prop, .modal-header-no-prop {
+  position: relative;
+  font-family: 'PlanerMed', Tahoma, Geneva, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #6e6259;
+  padding: 20px 15px 15px 15px;
+  background-color: #eeeee6; }
+
+.modal-content {
+  background-color: #eeeee6;
+  height: 100%;
+  min-height: 100%;
+  border: 0;
+  /*        @include box-shadow(rgba(50, 50, 50, 0.4) 0 10px 1px 0);*/
+  overflow: visible; }
+  .modal-content .indent {
+    margin-left: 15px; }
+
+.modal-body {
+  position: absolute;
+  top: 0px;
+  bottom: 60px;
+  width: 100%;
+  /*    height:100%;*/
+  overflow-y: auto;
+  /*    min-height: 200px;*/ }
+  .modal-body .row ~ .row {
+    margin-top: 20px; }
+  .modal-body .container-fluid {
+    height: 100%; }
+    .modal-body .container-fluid .row ~ .row {
+      margin-top: 20px; }
+
+.modal-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /*        border-radius: 0 0 6px 6px;
+          -webkit-border-radius: 0 0 6px 6px;*/
+  margin: 0;
+  border-top: 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  /*    .btn {
+          min-width:100px;
+          padding: 15px;
+          &.btn-neutral {
+              min-width: 60px;
+              &:hover {
+                  background-color: $brand-primary;
+              }
+          }
+          &.btn-primary {
+                          min-width: 60px;
+          }
+      }    */ }
+  .modal-footer .cancel-link {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 6px;
+    opacity: 1; }
+    .modal-footer .cancel-link a:link {
+      font-family: 'Planer', Tahoma, Geneva, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #007681;
+      font-size: 16px;
+      text-decoration: none; }
+      .modal-footer .cancel-link a:link:hover {
+        color: #2a9ea8;
+        text-decoration: underline; }
+
+.modal-white > .modal-dialog > .modal-content {
+  background-color: #fff; }
+  .modal-white > .modal-dialog > .modal-content .modal-body {
+    padding: 55px 40px 0 40px; }
+  .modal-white > .modal-dialog > .modal-content .modal-footer {
+    background-color: #eeeee6; }
+
+.modal-header + .modal-body {
+  top: 70px; }
+
+.modal-header-wizard + .modal-body {
+  top: 260px; }
+
+.modal-header-prop + .modal-body {
+  top: 190px; }
+
+.modal-header-no-prop + .modal-body {
+  top: 155px; }
+
+.wizHeader {
+  padding: 30px 0 0 0;
+  margin: 0;
+  height: 224px;
+  min-height: 224px;
+  border-bottom: 1px #6e6259 solid; }
+  .wizHeader h2 {
+    margin-bottom: 40px; }
+
+.noTabHeader {
+  padding: 30px 0 0 0;
+  margin: 0 0 20px 0;
+  height: 124px;
+  min-height: 124px;
+  border-bottom: 1px #6e6259 solid; }
+  .noTabHeader h2 {
+    margin-bottom: 40px; }
+
+.propHeader {
+  padding-top: 40px;
+  height: 165px;
+  min-height: 165px; }
+  .propHeader h2 {
+    margin-bottom: 30px; }
+
+.modal-header:not(.modal-header-wizard) {
+  padding: 20px 15px 15px 20px; }
+  .modal-header:not(.modal-header-wizard) .modal-body {
+    padding: 20px 5px 20px 5px; }
+
+/*# sourceMappingURL=Modal.css.map */

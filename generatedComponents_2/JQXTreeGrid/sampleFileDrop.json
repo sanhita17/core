@@ -1,0 +1,11 @@
+[  
+    {  
+        "fdId":1,
+        "fdNum":"",
+        "fdTitle":"<input type=\"text\" class=\"form-control\" placeholder=\"Test123.doc\">",
+        "fdFormat":"Placeholder",
+        "fdSize":"...",
+        "fdActions":"Replace",
+        "fdActions2":"<span class=\"ilicon ilicon-delete\"></span>"
+    }
+]

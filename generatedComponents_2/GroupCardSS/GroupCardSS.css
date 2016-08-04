@@ -1,0 +1,118 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.card-container, .group-card-container {
+  margin: 0 auto; }
+  .card-container h3, .group-card-container h3 {
+    margin-bottom: 20px; }
+  .card-container .ilicon, .group-card-container .ilicon {
+    font-size: 24px; }
+
+.card-closeicon {
+  text-align: right;
+  padding: 5px 5px 0px 0px; }
+  .card-closeicon .ilicon {
+    font-size: 20px; }
+
+.card-featured-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background-color: #afafaf;
+  -webkit-box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  box-shadow: 0px -1px 1px 0px rgba(50, 50, 50, 0.2);
+  border: 2px #cfcfcf solid;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+  text-align: center; }
+  .card-featured-icon .ilicon {
+    margin-top: 10px;
+    font-size: 18pt;
+    color: #fff; }
+
+.card-solo-icon {
+  width: 100%;
+  display: inline-block;
+  text-align: center; }
+  .card-solo-icon .ilicon {
+    margin-top: 10px;
+    font-size: 64pt;
+    color: #6e6259; }
+
+.card-button-box {
+  margin: 0; }
+  .card-button-box a {
+    margin-bottom: 5px; }
+  .card-button-box button {
+    margin-bottom: 20px; }
+
+.card-details-container {
+  text-align: left;
+  background-color: #eee;
+  border-top: 1px solid #6e6259;
+  padding-top: 20px; }
+
+.card-main-role {
+  color: #000;
+  margin-bottom: 20px; }
+
+.card-sub-text {
+  margin-bottom: 20px; }
+
+.card-detail-row {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 20px; }
+
+.card-detail {
+  /*    text-transform:uppercase;*/
+  color: #000; }
+
+.card-content {
+  padding: 28px 20px 28px 20px; }
+
+.card-full-height {
+  min-height: 450px; }
+
+.card-contact-info {
+  padding-top: 25px; }
+  .card-contact-info .ilicon {
+    padding-right: 5px;
+    color: #007681;
+    display: inline-block;
+    vertical-align: text-top;
+    font-size: 20px; }
+  .card-contact-info div {
+    display: table;
+    margin-bottom: 8px; }
+    .card-contact-info div span {
+      display: table-cell;
+      vertical-align: top; }
+    .card-contact-info div .user-detail {
+      padding-top: 6px; }
+    .card-contact-info div .user-icon {
+      width: 29px; }
+
+.card-bottom {
+  min-height: 180px;
+  border-top: 1px solid #6e6259;
+  background-color: #eeeeee;
+  padding: 28px 20px 28px 20px; }
+  .card-bottom .ss-outer {
+    width: 70%; }
+  .card-bottom .row > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.group-card-container {
+  border: 1px solid #6e6259;
+  background-color: #fff;
+  text-align: left;
+  margin: auto; }
+  .group-card-container .card-featured-icon {
+    text-align: center;
+    margin: 0 20px 0 0; }
+
+/*# sourceMappingURL=GroupCardSS.css.map */

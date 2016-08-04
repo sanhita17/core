@@ -1,0 +1,33 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+.live-support {
+  position: fixed;
+  /*    top: $full-frame-border-width;
+      right: $full-frame-border-width+10;*/
+  top: 0px;
+  right: 0px;
+  z-index: 200;
+  margin: 0;
+  padding: 0; }
+  .live-support .ls-tab, .live-support .live-support-tab, .live-support .il-designer-tab {
+    background-color: #babc16;
+    padding: 5px 10px 10px 10px;
+    display: inline-block;
+    margin-left: 10px;
+    color: #6e6259;
+    font-size: 14px;
+    white-space: nowrap; }
+    .live-support .ls-tab .ls-label, .live-support .live-support-tab .ls-label, .live-support .il-designer-tab .ls-label {
+      margin-left: 10px; }
+  .live-support .live-support-tab {
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px; }
+  .live-support .il-designer-tab {
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px; }
+
+/*# sourceMappingURL=LiveSupport.css.map */

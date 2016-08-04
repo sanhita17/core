@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "parentid": "-1",
+        "text": "All Users (231)",
+        "value": ""
+    },
+    {
+        "id": "2",
+        "parentid": "-1",
+        "text": "All Groups (7)",
+        "value": ""
+    },
+    {
+        "id": "3",
+        "parentid": "2",
+        "text": "Buyer 1 Finance Group",
+        "value": ""
+    },
+    {
+        "id": "4",
+        "parentid": "2",
+        "text": "Buyer 1 Legal Group",
+        "value": ""
+    },
+    {
+        "id": "5",
+        "parentid": "2",
+        "text": "Buyer 2 Finance Group",
+        "value": ""
+    },
+    {
+        "id": "6",
+        "parentid": "2",
+        "text": "Buyer 2 Legal Group",
+        "value": ""
+    },
+    {
+        "id": "7",
+        "parentid": "2",
+        "text": "Buyer 3 HR",
+        "value": ""
+    },
+    {
+        "id": "8",
+        "parentid": "2",
+        "text": "Buyer 3 Special",
+        "value": ""
+    },
+    {
+        "id": "9",
+        "parentid": "2",
+        "text": "Finance Collaboration Group",
+        "value": ""
+    }
+]

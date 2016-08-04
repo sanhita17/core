@@ -1,0 +1,171 @@
+@import "../base";
+@import "../variables";
+
+$nav-icon-padding-y : 18px;
+
+nav {
+    position:fixed;
+    top:0;
+    z-index:10;
+    height:100%;
+    width:$navbar-width;
+    background-color:$brown-primary;
+
+    .upper-nav-container {
+        display: block;
+    }
+
+    .lower-nav-container{
+        display: block;
+    }
+    .topUL {
+        list-style:none;
+        padding:0;
+        text-align:center;
+
+        li {
+            font-size:24px;
+            color:#fff;
+            padding:$nav-icon-padding-y 0;
+            //position:relative;
+            a {
+                display:block;
+                height:100%;
+                width:100%;
+                color:#fff;
+                cursor:pointer;
+            }
+            &:hover {
+                background-color:$brand-selected-state;
+                cursor:pointer;
+
+                a {
+                    .ilicon-workspace-single, .ilicon-workspace-double {
+                        color: #fff;
+                    }
+                }
+                .notify-number {
+                    color: #fff;
+                }
+            }
+
+            &.logo:hover { background-color:transparent; }
+
+            &.workspace {
+                font-size: 36px;
+                height: 64px;
+
+                a {
+                    color: #fff;
+                    position: relative;
+                    top: -12px;
+
+                    &:hover {
+                        .ilicon-workspace-single, .ilicon-workspace-double {
+                            color: #fff;
+                        }
+                    }
+                }
+                span {
+                    top: 4px;
+                }
+
+                .ilicon-workspace-single {
+                    color: $brand-selected-state;
+                    position: relative;
+                }
+                .ilicon-workspace-double {
+                    top:-48px;
+                    left: 1px;
+                    color: $brand-primary-hover;
+                }
+            }
+
+            &.selected {
+                color:$brand-primary;
+                background-color:$body-bg;
+                &:hover { background-color:$body-bg; cursor:default;
+                          a {
+
+                              .ilicon-workspace-single {
+                                  color: $brand-selected-state;
+                              }
+
+                              .ilicon-workspace-double {
+                                  color: $brand-primary-hover;
+                              }
+                          }
+                          .notify-number {
+                              color: $brand-highlight;
+                          }
+                }
+                a {
+                    color:$brand-primary; 
+                    cursor:default;
+                }
+            }
+        }
+    }
+
+    .bottomUL{
+        position: fixed;
+        width: 64px;
+        bottom: 10px;
+        left: 0px;
+        @extend .topUL;
+        
+        @media screen and (max-height: 620px) {
+            position: relative;
+            top: -10px;
+        }
+    }
+
+/*    .nav-bottom {
+        position: fixed;
+        width: 64px;
+        bottom: 20px;
+        left: 0px;
+        .tooltip {
+            white-space: nowrap;
+        }
+        @media screen and (max-height: 620px) {
+            position: relative;
+            top: -10px;
+        }
+    }*/
+
+    .logo {
+        height:(60px + ($nav-icon-padding-y * 2));
+        background-image:url('Intralinks-SG_logo.png');
+        background-repeat:no-repeat;
+        background-position:5px 10px;
+        a {
+            padding-top:23px;
+            display:block;
+            width:100%;
+            .ilicon{
+                font-size:16px;
+            }
+        }
+    }
+    .notify-badge {
+        position:absolute;
+        right:10px;
+        z-index:1;
+        //background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
+        background-color: $brand-highlight;
+        border: 0;
+        border-radius: 12px; /* one half of ( (border * 2) + height + padding ) */
+        color: #fff;
+        font: bold 14px/13px $font-family-ilfonts;
+        height: 20px; 
+        min-width: 20px;
+        padding: 4px 3px 0 3px;
+        text-align: center;
+        width:20px;
+    }
+    
+    .ilicon{
+        outline:none;
+    }
+}

@@ -1,0 +1,42 @@
+@import "../_base";
+@import "../_variables";
+
+.live-support {
+    position: fixed;
+/*    top: $full-frame-border-width;
+    right: $full-frame-border-width+10;*/
+    top:0px;
+    right:0px;
+    z-index: 200;
+    margin:0;
+    padding:0;
+
+    .ls-tab{
+     background-color: $brand-selected-state;    
+        padding: 5px 10px 10px 10px;
+        display:inline-block;
+        margin-left: 10px;
+        color: $brown-primary;
+        font-size: 14px;
+        white-space: nowrap;   
+        .ls-label{
+            margin-left:10px;
+        }
+    }
+    
+    .live-support-tab{
+        @extend .ls-tab;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .il-designer-tab{
+        @extend .ls-tab;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        -webkit-border-bottom-right-radius: 10px;
+        -moz-border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}

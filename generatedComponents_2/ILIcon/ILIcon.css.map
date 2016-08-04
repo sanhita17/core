@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAEA,gBAAgB;EACZ,gBAAgB,ECSG,OAAO",
+"sources": ["ILIcon.scss","../_base.scss"],
+"names": [],
+"file": "ILIcon.css"
+}

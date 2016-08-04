@@ -1,0 +1,21 @@
+.gridmover {
+  width: 100%;
+  text-align: center;
+  padding-top: 80px; }
+
+.gridmover-icon.btn-lg {
+  width: 50px;
+  min-width: 50px !important;
+  height: 50px;
+  min-height: 50px !important;
+  padding: 10px 16px !important;
+  font-size: 18px;
+  line-height: 1.33 !important;
+  -webkit-border-radius: 90px !important;
+  -moz-border-radius: 90px !important;
+  border-radius: 90px !important; }
+
+.gridmover-icon ~ .gridmover-icon {
+  margin-top: 45px; }
+
+/*# sourceMappingURL=Gridmover.css.map */

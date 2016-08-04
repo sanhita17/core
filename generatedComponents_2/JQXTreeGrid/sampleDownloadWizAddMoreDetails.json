@@ -1,0 +1,42 @@
+[  
+    {  
+        "tId":1,
+        "tLock":"<span class=\"ilicon ilicon-chevron-right\"></span>",
+        "tType":"<span class=\"ilicon ilicon-folder\"></span>",
+        "tNum":"1.0",
+        "tTitle":"Assets",
+        "tSize":"51mb"
+    },
+    {  
+        "tId":2,
+        "tLock":"<span class=\"ilicon ilicon-chevron-right\"></span>",
+        "tType":"<span class=\"ilicon ilicon-folder\"></span>",
+        "tNum":"2.0",
+        "tTitle":"Accounting",
+        "tSize":"78mb"
+    },
+    {  
+        "tId":3,
+        "tLock":"<span class=\"ilicon ilicon-chevron-right\"></span>",
+        "tType":"<span class=\"ilicon ilicon-folder\"></span>",
+        "tNum":"3.0",
+        "tTitle":"HR",
+        "tSize":"14mb"
+    },
+    {  
+        "tId":4,
+        "tLock":"<span class=\"ilicon ilicon-chevron-right\"></span>",
+        "tType":"<span class=\"ilicon ilicon-folder\"></span>",
+        "tNum":"4.0",
+        "tTitle":"Finance",
+        "tSize":"7.8mb"
+    },
+    {  
+        "tId":5,
+        "tLock":"<span class=\"ilicon ilicon-chevron-right\"></span>",
+        "tType":"<span class=\"ilicon ilicon-folder\"></span>",
+        "tNum":"5.0",
+        "tTitle":"Legal",
+        "tSize":"78mb"
+    }
+]

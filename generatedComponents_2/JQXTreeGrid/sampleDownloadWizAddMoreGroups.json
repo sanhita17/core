@@ -1,0 +1,16 @@
+[  
+    {  
+        "tId":1,
+        "tType":"<span class=\"ilicon ilicon-exchange\"></span>",
+        "tExchange":"Dealspace VDR - New UX - Momentum",
+        "tSize":"158.8mb",
+        "tActions":"<a href=\"#\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\".dpDownloadWizardModalAddMoreGroupDetails\"'><span class=\"ilicon ilicon-chevron-right\"></span></a>"
+    },
+    {  
+        "tId":2,
+        "tType":"<span class=\"ilicon ilicon-exchange\"></span>",
+        "tExchange":"IL UI Uplift",
+        "tSize":"102mb",
+        "tActions":"<a href=\"#\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\".dpDownloadWizardModalAddMoreGroupDetails\"'><span class=\"ilicon ilicon-chevron-right\"></span></a>"
+    }
+]

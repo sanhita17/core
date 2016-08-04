@@ -1,0 +1,44 @@
+[  
+    {  
+        "tId":1,
+        "tName":"<span class=\"ilicon ilicon-group\"></span> Auto Permission Users",
+        "tType":"",
+        "tMem":"",
+        "tPerm":"<input type=\"checkbox\"> Auto"
+    },
+    {  
+        "tId":2,
+        "tName":"<span class=\"ilicon ilicon-group\"></span> <a href=\"#\">Buyer 1 Finance Group</a>",
+        "tType":"Buyer Group",
+        "tMem":"5",
+        "tPerm":"cellClickPanelDropdown here"
+    },
+    {  
+        "tId":2,
+        "tName":"<span class=\"ilicon ilicon-group\"></span> <a href=\"#\">Buyer 1 Legal Group</a>",
+        "tType":"Buyer Group",
+        "tMem":"5",
+        "tPerm":"cellClickPanelDropdown here"
+    },
+    {  
+        "tId":3,
+        "tName":"<span class=\"ilicon ilicon-group\"></span> <a href=\"#\">Buyer 2 Finance Group</a>",
+        "tType":"Buyer Group",
+        "tMem":"5",
+        "tPerm":"cellClickPanelDropdown here"
+    },
+    {  
+        "tId":4,
+        "tName":"<span class=\"ilicon ilicon-group\"></span> <a href=\"#\">Buyer 2 Legal Group</a>",
+        "tType":"Buyer Group",
+        "tMem":"5",
+        "tPerm":"cellClickPanelDropdown here"
+    },
+    {  
+        "tId":5,
+        "tName":"<span class=\"ilicon ilicon-group\"></span> <a href=\"#\">Finance Collaboration</a>",
+        "tType":"Collaboration Group",
+        "tMem":"14",
+        "tPerm":"cellClickPanelDropdown here"
+    }
+]

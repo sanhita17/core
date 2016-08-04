@@ -1,0 +1,120 @@
+/* Color and Brand Mixers will go in here, to be imported by all Component SCSS files */
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  width: 64px;
+  background-color: #6e6259;
+  /*    .nav-bottom {
+          position: fixed;
+          width: 64px;
+          bottom: 20px;
+          left: 0px;
+          .tooltip {
+              white-space: nowrap;
+          }
+          @media screen and (max-height: 620px) {
+              position: relative;
+              top: -10px;
+          }
+      }*/ }
+  nav .upper-nav-container {
+    display: block; }
+  nav .lower-nav-container {
+    display: block; }
+  nav .topUL, nav .bottomUL {
+    list-style: none;
+    padding: 0;
+    text-align: center; }
+    nav .topUL li, nav .bottomUL li {
+      font-size: 24px;
+      color: #fff;
+      padding: 18px 0; }
+      nav .topUL li a, nav .bottomUL li a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        cursor: pointer; }
+      nav .topUL li:hover, nav .bottomUL li:hover {
+        background-color: #babc16;
+        cursor: pointer; }
+        nav .topUL li:hover a .ilicon-workspace-single, nav .bottomUL li:hover a .ilicon-workspace-single, nav .topUL li:hover a .ilicon-workspace-double, nav .bottomUL li:hover a .ilicon-workspace-double {
+          color: #fff; }
+        nav .topUL li:hover .notify-number, nav .bottomUL li:hover .notify-number {
+          color: #fff; }
+      nav .topUL li.logo:hover, nav .bottomUL li.logo:hover {
+        background-color: transparent; }
+      nav .topUL li.workspace, nav .bottomUL li.workspace {
+        font-size: 36px;
+        height: 64px; }
+        nav .topUL li.workspace a, nav .bottomUL li.workspace a {
+          color: #fff;
+          position: relative;
+          top: -12px; }
+          nav .topUL li.workspace a:hover .ilicon-workspace-single, nav .bottomUL li.workspace a:hover .ilicon-workspace-single, nav .topUL li.workspace a:hover .ilicon-workspace-double, nav .bottomUL li.workspace a:hover .ilicon-workspace-double {
+            color: #fff; }
+        nav .topUL li.workspace span, nav .bottomUL li.workspace span {
+          top: 4px; }
+        nav .topUL li.workspace .ilicon-workspace-single, nav .bottomUL li.workspace .ilicon-workspace-single {
+          color: #babc16;
+          position: relative; }
+        nav .topUL li.workspace .ilicon-workspace-double, nav .bottomUL li.workspace .ilicon-workspace-double {
+          top: -48px;
+          left: 1px;
+          color: #2a9ea8; }
+      nav .topUL li.selected, nav .bottomUL li.selected {
+        color: #007681;
+        background-color: #eeeee6; }
+        nav .topUL li.selected:hover, nav .bottomUL li.selected:hover {
+          background-color: #eeeee6;
+          cursor: default; }
+          nav .topUL li.selected:hover a .ilicon-workspace-single, nav .bottomUL li.selected:hover a .ilicon-workspace-single {
+            color: #babc16; }
+          nav .topUL li.selected:hover a .ilicon-workspace-double, nav .bottomUL li.selected:hover a .ilicon-workspace-double {
+            color: #2a9ea8; }
+          nav .topUL li.selected:hover .notify-number, nav .bottomUL li.selected:hover .notify-number {
+            color: #ff7900; }
+        nav .topUL li.selected a, nav .bottomUL li.selected a {
+          color: #007681;
+          cursor: default; }
+  nav .bottomUL {
+    position: fixed;
+    width: 64px;
+    bottom: 10px;
+    left: 0px; }
+    @media screen and (max-height: 620px) {
+      nav .bottomUL {
+        position: relative;
+        top: -10px; } }
+  nav .logo {
+    height: 96px;
+    background-image: url("Intralinks-SG_logo.png");
+    background-repeat: no-repeat;
+    background-position: 5px 10px; }
+    nav .logo a {
+      padding-top: 23px;
+      display: block;
+      width: 100%; }
+      nav .logo a .ilicon {
+        font-size: 16px; }
+  nav .notify-badge {
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+    background-color: #ff7900;
+    border: 0;
+    border-radius: 12px;
+    /* one half of ( (border * 2) + height + padding ) */
+    color: #fff;
+    font: bold 14px/13px "Planer", Tahoma, Geneva, sans-serif;
+    height: 20px;
+    min-width: 20px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+    width: 20px; }
+  nav .ilicon {
+    outline: none; }
+
+/*# sourceMappingURL=LeftNavBar.css.map */
