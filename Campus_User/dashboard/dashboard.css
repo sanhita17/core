@@ -1,0 +1,27 @@
+.-box{
+   width:348px;
+   padding:30px;
+   margin:160px auto 0;
+   border-radius:15px;
+   background-color:#ffffff;
+}
+.-logo {
+   width:288px;
+   height:60px;
+   background-image: url("/client/vsl/velocity/resources/images/logos/velocity_logo_blue.svg");
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   margin-bottom:15px;
+}
+.-role{
+   text-align: center;
+   color: #5B75B8;
+   font-family: SourceSansProBold;
+   font-size: 20px;
+}
+.-page{
+   text-align: center;
+   color: #B8755B;
+   font-family: SourceSansProBold;
+   font-size: 20px;
+}
