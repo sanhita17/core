@@ -259,7 +259,3 @@ function homePageService($http, $q) {
     return homePageService;
 
 }
-services.js
-Open with
-4 of 11 items
-home.tpl.htmlapp.csscontroller.jsservices.jshomepage-1.jsonhomepage-2.jsonhomepage-3.jsonhomepage-4.jsonhomepage-5.jsonhomepage-6.jsonhomepage-7.jsonDisplaying services.js.
