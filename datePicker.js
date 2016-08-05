@@ -114,7 +114,4 @@ encapsulatedScript(function($localPath) {
    }
 
 });
-datePicker.js
-Open with
-3 of 4 items
-datePicker.htmldatePicker.cssdatePicker.jstest.htmlDisplaying datePicker.css.
+
